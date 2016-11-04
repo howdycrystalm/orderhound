@@ -1,0 +1,10 @@
+.overlay {
+  background: rgba(48, 68, 97, 0.87); }
+
+.background {
+  color: #EC4B53;
+  font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+  background-image: url("../assets/img/home-img.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }

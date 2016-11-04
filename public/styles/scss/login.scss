@@ -1,0 +1,10 @@
+@import 'public/styles/scss/_main'; //makes my variables from _main.scss available to login.scss.
+.overlay {
+  background: rgba(48, 68, 97, .87);
+}
+.background {
+  background-image: url('../assets/img/home-img.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

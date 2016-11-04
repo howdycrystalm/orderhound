@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="orderhound">
+  <head>
+    <title>Order Hound</title>
+    <meta charset="utf-8">
+    <meta name="description" content="track purchase orders in production flow">
+    <!--RESET FILE -->
+    <link rel="stylesheet" href="./public/styles/css/reset.css">
+    <!-- View Styles -->
+    <link rel="stylesheet" href="./public/styles/css/style.css">
+  </head>
+
+  <!-- <body>
+
+    <ui-view></ui-view> -->
+
+<body ng-controller="addpoCtrl">
+    {{test}}
+    <ui-view></ui-view>
+    <a ui-sref='addpo'>Add PO#</a>
+
+    <!-- CDNs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+    <!--Custom Script Files-->
+    <script src="./public/js/app.js"></script>
+    <script src="./public/js/addpoCtrl.js"></script>
+    <script src="./public/js/routes.js"></script>
+    <script src="./public/js/loginCtrl.js"></script>
+
+    <!-- <script src="./public/dist/bundle.js"></script> -->
+  </body>
+</html>
