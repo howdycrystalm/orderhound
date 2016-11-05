@@ -11,10 +11,10 @@ const annotate = require('gulp-ng-annotate');
 // DECLARE FILE PATHS
 // ============================================================
 const paths = {
-  jsSource: ['./public/**/*.js'], //where you find the js files
+  jsSource: ['./public/app/**/*.js'], //where you find the js files
   //** every single folder, and find * every single js file
-  sassSource: ['./public/styles/**/*.scss']
-  //sassSource:['main.scss']
+  sassSource: ['./public/app/**/*.scss']
+
 };
 // DEFINE TASKS
 // ============================================================
