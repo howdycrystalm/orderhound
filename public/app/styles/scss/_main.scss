@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+$title: 'Pacifico', cursive;
+$font: 'Gill Sans', 'Gill Sans MT', 'Calibri', sans-serif;
+$font-size: 30px;
+
 $off-white: #EFE9E9;
 $med-grey: #B3B3B3;
 $teal: #00BBB3;
@@ -5,13 +11,14 @@ $soft-red: #EC4B53;
 $dark-blue: #2F4461;
 $dark-grey: #333333;
 
-$font: 'Gill Sans', 'Gill Sans MT' , 'Calibri', sans-serif;
-$font-size: 30px;
+
 
 $border-radius: 8px;
+$border-color: #B3B3B3;
 
-$in-width: 375px;
-$in-height: 53px;
+$input-width: 375px;
+$input-height: 53px;
+$input-indent: 10px;
 
 $button-width: 168px;
 $button-height: 53px;

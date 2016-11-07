@@ -1,10 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
 .overlay {
-  background: rgba(48, 68, 97, 0.87); }
+  width: 100%;
+  height: 100vh;
+  background: rgba(48, 68, 97, 0.87);
+  position: absolute; }
 
 .background {
-  color: #EC4B53;
-  font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
-  background-image: url("../assets/img/home-img.jpg");
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url("../../../public/assets/img/homeBG.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
+
+.vertical-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex-direction: column; }
+
+.title {
+  font-family: "Pacifico", cursive;
+  font-size: 65px;
+  color: #EFE9E9;
+  position: absolute;
+  top: 86px; }
+
+.logo {
+  width: 85px;
+  height: 48px;
+  background: #EFE9E9;
+  position: relative;
+  top: 163px; }
+
+.input-field {
+  width: 375px;
+  height: 53px;
+  border-radius: 8px;
+  border: 2px solid #B3B3B3;
+  background: #EFE9E9;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
+  font-size: 30px;
+  position: absolute;
+  text-indent: 10px; }
+
+.postition-input1 {
+  top: 264px; }
+
+.postition-input2 {
+  top: 345px; }
+
+.button {
+  width: 375px;
+  height: 53px;
+  border-radius: 8px;
+  border: 2px solid #B3B3B3;
+  background: #00BBB3;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
+  font-size: 30px;
+  color: #EFE9E9;
+  position: absolute;
+  text-align: center; }
+
+.position-button1 {
+  top: 446px; }
+
+h2 {
+  display: inline-block;
+  padding: 0 40px;
+  position: relative; }
+
+h2:before,
+h2:after {
+  background: #EFE9E9;
+  content: "";
+  display: block;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  width: 135px; }
+
+h2:before {
+  right: 100%; }
+
+h2:after {
+  left: 100%; }
+
+.lines {
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
+  font-size: 30px;
+  color: #EFE9E9;
+  text-align: center;
+  position: relative;
+  top: 485px; }
+
+.teal-text {
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
+  font-size: 30px;
+  color: #00BBB3;
+  position: relative;
+  top: 508px; }
+
+.info-links {
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
+  font-size: 24px;
+  color: #B3B3B3;
+  position: relative;
+  top: 600px; }

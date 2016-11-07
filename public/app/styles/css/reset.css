@@ -20,6 +20,10 @@ time, mark, audio, video {
     box-sizing: border-box;
 }
 
+.font-thickness-adjust {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -58,4 +62,9 @@ button:focus {
 a {
     text-decoration: none;
     color: #fff;
+}
+
+:focus {
+  outline-color: transparent;
+  outline-style: none;
 }

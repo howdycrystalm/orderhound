@@ -9,7 +9,7 @@ angular.module('orderhound')
       controller: 'loginCtrl',
       templateUrl: 'app/states/login/login.html'
     })
-    
+
     .state('home',  {
       url: '/',
       controller: 'homeCtrl',

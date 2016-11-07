@@ -1,7 +1,7 @@
 angular.module('orderhound',  ['ui.router']);
 
 angular.module('orderhound')
-.config("$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
+.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
 
   $urlRouterProvider.otherwise('/')
 
@@ -56,5 +56,5 @@ angular.module('orderhound')
 .controller('loginCtrl', ["$scope", function($scope) {
   $scope.test = "major tom to ground control";
 
-
+  
 }]);

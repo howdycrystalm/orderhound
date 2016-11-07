@@ -15,20 +15,22 @@ const app = module.exports = express();
 //app.use uses whatever's in the parenthesis aka function on every request to the server
 app.use(bodyParser.json());//using the bodyParser.json() function on every request aka app.use
 app.use(cors());
-app.use(express.static('../public'));
+app.use(express.static(__dirname + './../public'));
 
 app.set('db', massiveServer); //these two lines let us pass database connection between files.
 const db = app.get('db');
 
-const checkinCtrl = require('./controllers/checkinCtrl') //require the controller
+
+
+const checkinCtrl = require('./controllers/checkinCtrl') //require the controller on server side
 
 //endpoints
 //now what is my front end asking for?
 //in otherwords, whatever requests the endpoint in angular is where the endpoint is responding to. where the data is being sent.
 //first parameter is the URL aka endpoint, the second parameter are instructions on what to do next if someone hits the endopoint
 //.send is only for a string, so we used .json
-app.post('/checkin', checkinCtrl.checkin)
-
+app.post('/checkin', checkinCtrl.checkin);
+app.get('/checkin', checkinCtrl.test);
 
 const port = 8080;
 app.listen(port, function () {

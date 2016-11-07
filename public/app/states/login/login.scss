@@ -1,10 +1,131 @@
 @import 'public/app/styles/scss/_main'; //makes my variables from _main.scss available to login.scss.
 .overlay {
+  width: 100%;
+  height: 100vh;
   background: rgba(48, 68, 97, .87);
+  position: absolute;
+
 }
+//not working. weird path name, check inpector and console log
 .background {
-  background-image: url('../assets/img/home-img.jpg');
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  //background-image: url('https://images.unsplash.com/photo-1443891238287-325a8fddd0f7?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=06e50906fc6f6c75ef89dd7cc5623693');
+  background-image: url('../../../public/assets/img/homeBG.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.vertical-container {
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  flex-direction: column;
+}
+
+.title {
+  font-family: $title;
+  font-size: 65px;
+  color: $off-white;
+  position: absolute;
+  top: 86px;
+}
+
+.logo {
+  width: 85px;
+  height: 48px;
+  //background: url('./public/assets/img/logo-off-white.png');
+  background: $off-white; //placeholder until fix file path
+  position: relative;
+  top: 163px;
+}
+
+.input-field {
+  width: $input-width;
+  height: $input-height;
+  border-radius: $border-radius;
+  border: 2px solid $border-color;
+  background: $off-white;
+  font-family: $font;
+  font-size: $font-size;
+  position: absolute;
+  text-indent: $input-indent;
+}
+
+.postition-input1 {
+  top: 264px;
+}
+
+.postition-input2 {
+  top: 345px;
+}
+
+.button {
+  width: $input-width;
+  height: $input-height;
+  border-radius: $border-radius;
+  border: 2px solid $border-color;
+  background: $teal;
+  font-family: $font;
+  font-size: $font-size;
+  color: #EFE9E9;
+  position: absolute;
+  text-align: center;
+}
+
+.position-button1 {
+  top: 446px;
+}
+//or//
+
+h2 {
+  display: inline-block;
+  padding: 0 40px;
+  position: relative;
+}
+
+h2:before,
+h2:after {
+  background: $off-white;
+  content: "";
+  display: block;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  width: 135px;
+}
+h2:before {
+  right: 100%;
+}
+h2:after {
+  left: 100%;
+}
+.lines {
+  font-family: $font;
+  font-size: $font-size;
+  color: $off-white;
+  text-align: center;
+  position: relative;
+  top: 485px;
+}
+
+.teal-text {
+  font-family: $font;
+  font-size: $font-size;
+  color: $teal;
+  position: relative;
+  top: 508px;
+}
+
+.info-links {
+  font-family: $font;
+  font-size: 24px;
+  color: $med-grey;
+  position: relative;
+  top: 600px;
 }

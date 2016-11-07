@@ -29,7 +29,7 @@ gulp.task('sass', function () {
   return gulp.src(paths.sassSource)
     .pipe(sass()) //this line converts scss to css
     .pipe(concat('style.css')) //concats into this file, stye.css
-    .pipe(gulp.dest('./public/styles/css')); //in here, we tell it the file where to live
+    .pipe(gulp.dest('./public/app/styles/css')); //in here, we tell the css file where to live
 });
 // WATCH TASK
 // ============================================================
