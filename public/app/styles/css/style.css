@@ -61,7 +61,16 @@
 .input-po-position {
   top: 263px; }
 
-.add-button, .remove-button {
+.row-align {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  flex-direction: row; }
+
+.add-button {
   width: 168px;
   height: 53px;
   border-radius: 8px;
@@ -77,10 +86,29 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 20px; }
+  padding: 20px;
+  position: relative;
+  right: 22px; }
 
-.remove-button {
-  color: #EC4B53; }
+.a-find {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  position: relative;
+  left: 22px; }
+
+.find-button {
+  width: 168px;
+  height: 53px;
+  border-radius: 8px;
+  border: 2px solid #B3B3B3;
+  background: #EC4B53;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
+  font-size: 30px;
+  color: #EFE9E9;
+  position: relative;
+  top: 370px; }
 
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 .overlay {

@@ -72,6 +72,16 @@
     top: 263px;
 }
 
+.row-align{
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  flex-direction: row;
+}
+
 .add-button {
   width: $button-width;
   height: $button-height;
@@ -90,9 +100,28 @@
   align-items: center;
   justify-content: space-around;
   padding: 20px;
+  position: relative;
+  right: 22px;
 }
 
-.remove-button {
-  @extend .add-button;
-  color: $soft-red;
+.a-find {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  position: relative;
+  left: 22px;
+}
+
+.find-button {
+  width: $button-width;
+  height: $button-height;
+  border-radius: $border-radius;
+  border: 2px solid $border-color;
+  background: $soft-red;
+  font-family: $font;
+  font-size: $font-size;
+  color: $off-white;
+  position: relative;
+  top: 370px;
 }
