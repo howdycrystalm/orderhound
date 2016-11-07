@@ -1,4 +1,88 @@
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
+.background-home {
+  width: 100%;
+  height: 100vh;
+  background: #333333;
+  background-size: cover; }
+
+.container {
+  display: flex; }
+
+.div-home {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: column; }
+
+.left-half {
+  color: #EFE9E9;
+  background-color: #333333;
+  flex: 1;
+  padding: 1rem; }
+
+.right-half {
+  color: #EFE9E9;
+  background-color: #333333;
+  flex: 1;
+  padding: 1rem; }
+
+.welcome-title {
+  font-family: "Pacifico", cursive;
+  font-size: 50px;
+  position: relative;
+  top: 140px; }
+
+.user-photo {
+  width: 160px;
+  height: 160px;
+  background: #B3B3B3;
+  padding: 0px;
+  border-radius: 100px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  position: relative;
+  top: 187px; }
+
+.station-name {
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
+  font-size: 30px;
+  color: #B3B3B3;
+  position: relative;
+  top: 230px; }
+
+.vertical-line {
+  height: 500px;
+  border-right: 4px solid #EFE9E9;
+  position: absolute;
+  top: 130px;
+  right: 510px; }
+
+.input-po-position {
+  top: 263px; }
+
+.add-button, .remove-button {
+  width: 168px;
+  height: 53px;
+  border-radius: 8px;
+  border: 2px solid #B3B3B3;
+  background: #00BBB3;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
+  font-size: 30px;
+  color: #EFE9E9;
+  position: relative;
+  top: 370px; }
+
+.a-add {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px; }
+
+.remove-button {
+  color: #EC4B53; }
+
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
 .overlay {
   width: 100%;
   height: 100vh;
@@ -8,11 +92,11 @@
 .background {
   width: 100%;
   height: 100vh;
-  position: relative;
   background-image: url("../../../public/assets/img/homeBG.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover; }
+  background-size: cover;
+  position: relative; }
 
 .vertical-container {
   display: -webkit-flex;
@@ -54,7 +138,7 @@
 .postition-input2 {
   top: 345px; }
 
-.button {
+.button-teal {
   width: 375px;
   height: 53px;
   border-radius: 8px;
@@ -63,8 +147,7 @@
   font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
   font-size: 30px;
   color: #EFE9E9;
-  position: absolute;
-  text-align: center; }
+  position: absolute; }
 
 .position-button1 {
   top: 446px; }

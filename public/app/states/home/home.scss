@@ -1,0 +1,98 @@
+@import 'public/app/styles/scss/_main';
+
+.background-home {
+  width: 100%;
+  height: 100vh;
+  background: $dark-grey;
+  background-size: cover;
+}
+//.container keeps the view divided in half
+.container {
+  display: flex;
+}
+
+.div-home {
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+  flex-direction: column;
+}
+
+.left-half {
+  color: $off-white;
+  background-color: $dark-grey;
+  flex: 1;
+  padding: 1rem;
+}
+
+.right-half {
+  color: $off-white;
+  background-color: $dark-grey;
+  flex: 1;
+  padding: 1rem;
+}
+
+.welcome-title {
+  font-family: $title;
+  font-size: 50px;
+  position: relative;
+  top: 140px;
+}
+
+.user-photo {
+  width: 160px;
+  height: 160px;
+  background: $med-grey;
+  padding: 0px;
+  border-radius: 100px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  position: relative;
+  top: 187px;
+}
+
+.station-name {
+  font-family: $font;
+  font-size: $font-size;
+  color: $med-grey;
+  position: relative;
+  top: 230px;
+}
+
+.vertical-line {
+  height: 500px;
+  border-right: 4px solid $off-white;
+  position: absolute;
+  top: 130px;
+  right: 510px;
+}
+
+.input-po-position {
+    top: 263px;
+}
+
+.add-button {
+  width: $button-width;
+  height: $button-height;
+  border-radius: $border-radius;
+  border: 2px solid $border-color;
+  background: $teal;
+  font-family: $font;
+  font-size: $font-size;
+  color: $off-white;
+  position: relative;
+  top: 370px;
+}
+
+.a-add {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.remove-button {
+  @extend .add-button;
+  color: $soft-red;
+}
