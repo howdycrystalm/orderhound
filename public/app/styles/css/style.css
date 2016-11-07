@@ -58,6 +58,12 @@
   top: 130px;
   right: 510px; }
 
+.drop-down {
+  color: #B3B3B3;
+  position: absolute;
+  right: 33px;
+  top: 25px; }
+
 .input-po-position {
   top: 263px; }
 
@@ -120,7 +126,7 @@
 .background {
   width: 100%;
   height: 100vh;
-  background-image: url("../../../public/assets/img/homeBG.jpg");
+  background-image: url("../../../assets/img/homeBG.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -145,7 +151,7 @@
 .logo {
   width: 85px;
   height: 48px;
-  background: #EFE9E9;
+  background-image: url("../../../assets/img/homeBG.jpg");
   position: relative;
   top: 163px; }
 

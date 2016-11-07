@@ -1,14 +1,15 @@
 <section class="background-home container font-thickness-adjust">
   <div class="div-home left-half">
-    <div class="welcome-title">Welcome, Björk</div>
+    <div class="welcome-title">Welcome, {{user-name}}</div>
     <img src="http://www.interviewmagazine.com/files/2009/05/21/img-bjork-fig-1_110739349400.jpg" class="user-photo" alt= "user photo"/>
-    <div class="station-name">Station: Laser Cutter</div>
+    <div class="station-name">Station: {{checkPointName}}</div>
     <div class="vertical-line"></div>
   </div>
   <div class="div-home right-half">
-    <input type="text"  placeholder="PO#" class="input-field input-po-position"/>
+    <div class="drop-down"><i class="fa fa fa-ellipsis-h fa-3x" aria-hidden="true" ></i></div>
+    <input type="text"  placeholder="PO#" class="input-field input-po-position" ng-model="ponum"/>
     <div class="row-align">
-      <a href="/" type="button" class="add-button a-add row-align">Add <i class="fa fa-plus" aria-hidden="true" fa-lg></i></a>
+      <a href="/" type="button" class="add-button a-add row-align" ng-click="addpo(ponum)">Add <i class="fa fa-plus" aria-hidden="true" fa-lg></i></a>
       <a href="/" type="button" class="find-button a-find row-align">Find <i class="fa fa-search" aria-hidden="true" fa-lg></i></a>
     </div>
   </div>

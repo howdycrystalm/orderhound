@@ -6,9 +6,8 @@ const massive = require('massive');
 
 
 const massiveServer = massive.connectSync({ //massiveServer is the variable that represents connection to our server
-  connectionString: 'postgres://localhost/orderhound' //localhost is the server name, postgress is my db name;
+  connectionString: 'postgres://localhost/orderhound' //orderhound is the database
 })
-
 //inistializing the app. invoking express
 const app = module.exports = express();
 

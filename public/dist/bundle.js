@@ -35,9 +35,9 @@ angular.module('orderhound')
 }])
 
 angular.module('orderhound')
-.service('homeService', function () {
+.service('homeService', ["$http", function ($http) {
 
-  this.postPO = function (ponumber) {
+  this.addpo = function (ponumber) {
     return $http ({
       method: 'POST',
       url: '/checkin',
@@ -46,11 +46,12 @@ angular.module('orderhound')
         checkpoint_id: 1
       }
     }).then(function (response) { //this will pretty much be the same for all of my service functions
+      console.log('is gonna return?');
       return response.data;
     })
 }
 
-})
+}])
 
 angular.module('orderhound')
 .controller('loginCtrl', ["$scope", function($scope) {
