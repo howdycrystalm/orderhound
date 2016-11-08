@@ -1,0 +1,17 @@
+<section class="background-home container font-thickness-adjust">
+  <div class="div-home left-half">
+    <div class="welcome-title">Welcome, {{user-name}}</div>
+    <img src="http://static.tvtropes.org/pmwiki/pub/images/8ca90e94b838e2355daec8f1f4323099.jpg" class="user-photo" alt= "user photo"/>
+    <div class="station-name">Admin</div>
+    <a href="/" type="button" class="button-teal">Users and Checkpoints</a>
+    <div class="vertical-line"></div>
+  </div>
+  <div class="div-home right-half">
+    <div class="drop-down"><i class="fa fa fa-ellipsis-h fa-3x" aria-hidden="true" ></i></div>
+    <input type="text"  placeholder="PO#" class="input-field input-po-position" ng-model="ponum"/>
+    <div class="row-align">
+      <a href="/" type="button" class="add-button a-add row-align" ng-click="addpo(ponum)">Add <i class="fa fa-plus" aria-hidden="true" fa-lg></i></a>
+      <a href="/" type="button" class="find-button a-find row-align">Find <i class="fa fa-search" aria-hidden="true" fa-lg></i></a>
+    </div>
+  </div>
+</section>

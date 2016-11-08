@@ -1,28 +1,20 @@
 angular.module('orderhound',  ['ui.router']);
 
 angular.module('orderhound')
-.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
+.controller('admin-homeCtrl', ["$scope", "homeService", function ($scope, homeService) {
 
-  $urlRouterProvider.otherwise('/')
+  $scope.test = homeService.message;
 
-  $stateProvider
-    .state('login', {
-      url: '/login',
-      controller: 'loginCtrl',
-      templateUrl: 'app/states/login/login.html'
+  $scope.addpo = function (ponum) {
+    homeService.addpo(ponum).then(function (response) {
+      //make a confirmation message, like checkin confirmed
+      console.log('checkin successful');
     })
-
-    .state('home',  {
-      url: '/',
-      controller: 'homeCtrl',
-      templateUrl: 'app/states/home/home.html'
-    })
+  }
 }])
 
 angular.module('orderhound')
 .controller('homeCtrl', ["$scope", "homeService", function ($scope, homeService) {
-
-  $scope.homeTest = "testing homeCtrl";
 
   $scope.test = homeService.message;
 
@@ -49,7 +41,8 @@ angular.module('orderhound')
       console.log('is gonna return?');
       return response.data;
     })
-}
+ }
+
 
 }])
 
@@ -59,3 +52,28 @@ angular.module('orderhound')
 
   
 }]);
+
+angular.module('orderhound')
+.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
+
+  $urlRouterProvider.otherwise('/')
+
+  $stateProvider
+    .state('login', {
+      url: '/login',
+      controller: 'loginCtrl',
+      templateUrl: 'app/states/login/login.html'
+    })
+
+    .state('home',  {
+      url: '/',
+      controller: 'homeCtrl',
+      templateUrl: 'app/states/home/home.html'
+    })
+
+    .state('admin-home', {
+      url: '/admin-home',
+      controller: 'admin-homeCtrl',
+      templateUrl: 'app/states/admin-home/admin-home.html'
+    })
+}])

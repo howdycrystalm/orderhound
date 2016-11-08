@@ -21,6 +21,12 @@
     "gulp-watch": "^4.3.10"
   },
   "dependencies": {
-    "massive": "^2.5.0"
+    "bcryptjs": "^2.3.0",
+    "cookie-parser": "^1.4.3",
+    "express-session": "^1.14.2",
+    "massive": "^2.5.0",
+    "passport": "^0.3.2",
+    "passport-http": "^0.3.0",
+    "passport-local": "^1.0.0"
   }
 }

@@ -15,4 +15,10 @@ angular.module('orderhound')
       controller: 'homeCtrl',
       templateUrl: 'app/states/home/home.html'
     })
+
+    .state('admin-home', {
+      url: '/admin-home',
+      controller: 'admin-homeCtrl',
+      templateUrl: 'app/states/admin-home/admin-home.html'
+    })
 })

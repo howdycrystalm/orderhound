@@ -1,5 +1,5 @@
 angular.module('orderhound')
-.controller('homeCtrl', function ($scope, homeService) {
+.controller('admin-homeCtrl', function ($scope, homeService) {
 
   $scope.test = homeService.message;
 

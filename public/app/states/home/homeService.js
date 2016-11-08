@@ -13,6 +13,7 @@ angular.module('orderhound')
       console.log('is gonna return?');
       return response.data;
     })
-}
+ }
+
 
 })

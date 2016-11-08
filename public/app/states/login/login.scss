@@ -4,13 +4,11 @@
   height: 100vh;
   background: rgba(48, 68, 97, .87);
   position: absolute;
-
 }
 //not working. weird path name, check inpector and console log
 .background {
   width: 100%;
   height: 100vh;
-  //background-image: url('https://images.unsplash.com/photo-1443891238287-325a8fddd0f7?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=06e50906fc6f6c75ef89dd7cc5623693');
   background-image: url('../../../assets/img/homeBG.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -39,8 +37,10 @@
 .logo {
   width: 85px;
   height: 48px;
-  background-image: url('../../../assets/img/homeBG.jpg');
-  //background: $off-white; //placeholder until fix file path
+  background: url('../../../assets/img/logo-off-white.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   position: relative;
   top: 163px;
 }
@@ -75,6 +75,14 @@
   font-size: $font-size;
   color: #EFE9E9;
   position: absolute;
+  top: 530px;
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  flex-direction: row;
 }
 
 .position-button1 {

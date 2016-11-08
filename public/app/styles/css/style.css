@@ -51,6 +51,135 @@
   position: relative;
   top: 230px; }
 
+.test {
+  width: 375px;
+  height: 53px;
+  border-radius: 8px;
+  border: 2px solid #B3B3B3;
+  background: #00BBB3;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
+  font-size: 30px;
+  color: #EFE9E9;
+  position: absolute; }
+
+.vertical-line {
+  height: 500px;
+  border-right: 4px solid #EFE9E9;
+  position: absolute;
+  top: 130px;
+  right: 510px; }
+
+.drop-down {
+  color: #B3B3B3;
+  position: absolute;
+  right: 33px;
+  top: 25px; }
+
+.input-po-position {
+  top: 263px; }
+
+.row-align {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  flex-direction: row; }
+
+.add-button {
+  width: 168px;
+  height: 53px;
+  border-radius: 8px;
+  border: 2px solid #B3B3B3;
+  background: #00BBB3;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
+  font-size: 30px;
+  color: #EFE9E9;
+  position: relative;
+  top: 370px; }
+
+.a-add {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  position: relative;
+  right: 22px; }
+
+.a-find {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  position: relative;
+  left: 22px; }
+
+.find-button {
+  width: 168px;
+  height: 53px;
+  border-radius: 8px;
+  border: 2px solid #B3B3B3;
+  background: #EC4B53;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
+  font-size: 30px;
+  color: #EFE9E9;
+  position: relative;
+  top: 370px; }
+
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+.background-home {
+  width: 100%;
+  height: 100vh;
+  background: #333333;
+  background-size: cover; }
+
+.container {
+  display: flex; }
+
+.div-home {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: column; }
+
+.left-half {
+  color: #EFE9E9;
+  background-color: #333333;
+  flex: 1;
+  padding: 1rem; }
+
+.right-half {
+  color: #EFE9E9;
+  background-color: #333333;
+  flex: 1;
+  padding: 1rem; }
+
+.welcome-title {
+  font-family: "Pacifico", cursive;
+  font-size: 50px;
+  position: relative;
+  top: 140px; }
+
+.user-photo {
+  width: 160px;
+  height: 160px;
+  background: #B3B3B3;
+  padding: 0px;
+  border-radius: 100px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  position: relative;
+  top: 187px; }
+
+.station-name {
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
+  font-size: 30px;
+  color: #B3B3B3;
+  position: relative;
+  top: 230px; }
+
 .vertical-line {
   height: 500px;
   border-right: 4px solid #EFE9E9;
@@ -151,7 +280,10 @@
 .logo {
   width: 85px;
   height: 48px;
-  background-image: url("../../../assets/img/homeBG.jpg");
+  background: url("../../../assets/img/logo-off-white.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   position: relative;
   top: 163px; }
 
@@ -181,7 +313,15 @@
   font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
   font-size: 30px;
   color: #EFE9E9;
-  position: absolute; }
+  position: absolute;
+  top: 530px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex-direction: row; }
 
 .position-button1 {
   top: 446px; }
