@@ -1,3 +1,3 @@
 SELECT *
 FROM employee_info
-WHERE id = $1;
+WHERE employee_name = $1;

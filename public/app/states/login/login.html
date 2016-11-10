@@ -3,14 +3,14 @@
   <div class="vertical-container font-thickness-adjust">
     <h1 class="title">Order Hound</h1>
     <div class="logo"></div>
-    <input type="text"  placeholder="Username" class="input-field postition-input1">
-    <input type="text"  placeholder="Password" class="input-field postition-input2">
-    <a href="/" type="button" class="button-teal position-button1 vertical-container">Continue</a>
-    <div class="lines">
-        <h2 class="font">or</h2>
-    </div>
-    <div class="teal-text">register your business</div>
-    <!--  or should this be an arrow pointing down either way make parralax scrolling -->
-    <div class="info-links">about | contact</div>
+      <input type="text"  placeholder="Username" class="input-field postition-input1" ng-model="user.username">
+      <input type="text"  placeholder="Password" class="input-field postition-input2" ng-model="user.password">
+      <input type="submit" class="button-teal position-button1 vertical-container" ng-click="login(user)">
+  <div class="lines">
+      <h2 class="font">or</h2>
+  </div>
+  <a ui-sref="register"><div class="teal-text">Register</div></a>
+  <!--  or should this be an arrow pointing down either way make parralax scrolling -->
+  <div class="info-links">about | contact</div>
 </div>
 </div>

@@ -6,19 +6,20 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const massive = require('massive');
 const session = require('express-session');
+const bcrypt = require('bcryptjs');
 
 /* ========================
            CONFIG
    ======================== */
-const config = require('./services/config.js');
+const config = require('./config');
 /* ========================
           EXPRESS
    ======================== */
-//inistializing the app. invoking express
+//initializing the app. invoking express
 const app = module.exports = express();
 
 //app.use uses whatever's in the parenthesis aka function on every request to the server
-app.use(bodyParser.json());//using the bodyParser.json() function on every request aka app.use
+app.use(bodyParser.json()); //using the bodyParser.json() function on every request aka app.use
 app.use(cors());
 app.use(express.static(__dirname + './../public'));
 
@@ -26,20 +27,22 @@ app.use(express.static(__dirname + './../public'));
 /* ========================
            MASSIVE
    ======================== */
-const massiveServer = massive.connectSync({ //massiveServer is the variable that represents connection to our server
-  connectionString: 'postgres://localhost/orderhound' //orderhound is the database
-})
+const massiveUri = config.MASSIVE_URI;
+const massiveServer = massive.connectSync({
+   connectionString: massiveUri
+});
 
 app.set('db', massiveServer); //these two lines let us pass database connection between files.
 const db = app.get('db');
 
-
+var dbSetup = require('./services/dbSetup');
+dbSetup.run();
 /* ========================
          CONTROLLERS
    ======================== */
 //server-side controller
 const checkinCtrl = require('./controllers/checkinCtrl') //require the controller on server side
-
+const userCtrl = require('./controllers/userCtrl');
 /* ========================
           SERVICES
    ======================== */
@@ -48,16 +51,39 @@ const passport = require('./services/passport');
 /* ========================
             POLICIES
    ======================== */
+const isAuthed = function(req, res, next) {
+    if (!req.isAuthenticated()) return res.status(401)
+        .send();
+    return next();
+};
 
+const isAdmin = function(req, res, next) { //if not admin, dont let go to view
+    if (!req.isAuthenticated() || !req.user.admin) return res.status(401)
+        .send();
+    return next();
+};
 
- /* ========================
-     SESSION AND PASSPORT
-    ======================== */
-
+/* ========================
+    SESSION AND PASSPORT
+   ======================== */
+app.use(session({
+    secret: config.SESSION_SECRET,
+    saveUninitialized: false,
+    resave: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 /* ========================
    PASSPORT AND ENDPOINTS
    ======================== */
+app.post('/login', passport.authenticate('local', {
+    successRedirect: '/home'
+}));
+
+// app.post('/login', passport.authenticate('local', {
+// 	successRedirect: '/me'
+// }));
 
 
 /* ========================
@@ -68,13 +94,16 @@ const passport = require('./services/passport');
 //first parameter is the URL aka endpoint, the second parameter are instructions on what to do next if someone hits the endopoint
 //.send is only for a string, so we used .json
 app.post('/checkin', checkinCtrl.checkin);
-app.get('');//making the find button
+app.get(''); //making the find button
+
+app.post('/register', userCtrl.register);
+app.get('/me', isAuthed, userCtrl.me);
 
 /* ========================
          CONNECTIONS
    ======================== */
 
-const port = 8080;
-app.listen(port, function () {
-  console.log('listening on', port);
-})
+const port = config.PORT;
+app.listen(port, function() {
+    console.log('listening on', port);
+});

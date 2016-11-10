@@ -12,20 +12,23 @@ const bcrypt = require('bcryptjs');
 /* ========================
             APP
    ======================== */
-
+const app = require('./../index.js');
+const db = app.get('db');
 /* ========================
        VERIFY PASSWORD
    ======================== */
-
+function verifyPassword(submitedPass, userPass) {
+    return bcrypt.compareSync(submitedPass, userPass);
+}
 /* ========================
       RUN WHEN LOGGIN IN
    ======================== */
    passport.use(new LocalStrategy({
-   	usernameField: 'username',
+   	usernameField: 'email',
    	passwordField: 'password'
-  }, function(username, password, done) {
+   }, function(email, password, done) {
 
-   	db.user_search_username([username], function(err, user) {
+   	db.user_search_email([email], function(err, user) {
    		user = user[0];
 
    		// If err, return err
@@ -41,3 +44,15 @@ const bcrypt = require('bcryptjs');
    		return done(null, false);
    	});
    }));
+
+   // Puts the user on the session
+   passport.serializeUser(function(user, done) {
+   	done(null, user.id);
+   });
+   passport.deserializeUser(function(id, done) {
+   	db.user_search_id([id], function(err, user) {
+   		done(err, user);
+   	});
+   });
+
+   module.exports = passport;

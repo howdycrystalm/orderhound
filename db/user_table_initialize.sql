@@ -1,5 +1,7 @@
-CREATE TABLE IF NOT EXISTS users (
+CREATE TABLE IF NOT EXISTS employee_info (
   id SERIAL PRIMARY KEY,
-  name varchar(50),
+  employee_name varchar(50),
+  admin boolean,
+  photo null,
   password varchar(50)
 );
