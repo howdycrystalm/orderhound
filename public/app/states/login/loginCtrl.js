@@ -3,13 +3,18 @@ angular.module('orderhound')
         $scope.test = "major tom to ground control";
 
         $scope.login = function(user) {
-            console.log(user);
+            
             authService.login(user).then(function(response) {
+              
                 if (!response.data) {
                     alert('User does not exist');
                     $scope.user.password = '';
-                } else {
-                  console.log("is it running?");
+                }
+                else if(response.data.admin){
+                  $state.go('admin-home');
+                }
+                else {
+                  
                     $state.go('home'); //takes us to home????
                 }
             }).catch(function(err) {

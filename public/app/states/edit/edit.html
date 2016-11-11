@@ -1,0 +1,10 @@
+<h1>you are on the edit view</h1>
+<h2>assign users to checkpoints</h2>
+<form ng-submit="getter(obj)">
+  Username: <input type="text" ng-model="obj.name" required/>
+  Password: <input type="password" ng-model="obj.password" required/>
+  Checkpoint: <input type="text" ng-model="obj.checkPoint" required/>
+  User Photo: <input type="text" ng-model="obj.photo" required/>
+  Admin: <input type="checkbox" ng-model="obj.admin"/>
+  <button type="submit">make user and checkpoint</button>
+</form>

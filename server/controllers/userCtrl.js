@@ -7,10 +7,10 @@ var bcrypt = require('bcryptjs');
 
 // HASH PASSWORD //
 function hashPassword(password) {
-	console.log("PREHASH PASSWORD: ", password);
+
 	var salt = bcrypt.genSaltSync(10);
 	var hash = bcrypt.hashSync(password, salt);
-	console.log("HASHED PASSWORD: ", hash);
+
 	return hash;
 }
 
@@ -19,22 +19,61 @@ module.exports = {
 	// REGISTER USER //
 	register: function(req, res, next) {
 		var user = req.body;
-		console.log("BACKEND REGISTER: ", user);
+
 
 		// Hash the users password for security
 		user.password = hashPassword(user.password);
 		db.admin_create([user.name, user.email, user.password, true], function(err, user) {
 		//db.user_create([user.name, user.email, user.password, true], function(err, user) {
 			// If err, send err
+
+			user = user[0];
+
 			if (err) {
-				console.log("error: ", err);
+
 				return res.status(500).send(err);
 			}
+			else if (req.body.checkPoint) {
+					db.checkpoint_create([req.body.checkPoint, user.id])
+			}
+
 			// Send user back without password.
 			delete user.password;
-			console.log("USER DB ENTRY SUCCESSFUL.");
+
 			res.status(200)
 				.send(user);
+		});
+	},
+	admin_create_user: function(req, res, next) {
+		var user = req.body;
+
+
+		// Hash the users password for security
+		user.password = hashPassword(user.password);
+		db.admin_user_create([user.name, user.admin, user.photo, user.password], function(err, userProcessed) {
+		//db.user_create([user.name, user.email, user.password, true], function(err, user) {
+			// If err, send err
+
+			if (err) {
+
+				return res.status(500).send(err);
+			}
+
+			userProcessed = userProcessed[0];
+
+			if (req.body.checkPoint) {
+				var x = [req.body.checkPoint, userProcessed.id]
+
+					db.checkpoint_create(x, function(err, response){
+
+					})
+			}
+
+			// Send user back without password.
+			delete user.password;
+
+			res.status(200)
+				.send(userProcessed);
 		});
 	},
 	// registerAdmin: function(req, res, next) {
@@ -62,7 +101,7 @@ module.exports = {
 
 	// Remove password for security
 	var user = req.user[0];
-	console.log("USER OBJECT: ",user);
+
 
 	delete user.password;
 
@@ -84,14 +123,14 @@ module.exports = {
 },
 
 	// RETURN CURRENT USER //
-	me: function(req, res, next) {
+	edit: function(req, res, next) {
 		// If user isnt on the session, then return error status
 		if (!req.user) return res.status(401)
 			.send('current user not defined');
 
 		// Remove password for security
 		var user = req.user[0];
-		console.log(user);
+
 
 		delete user.password;
 

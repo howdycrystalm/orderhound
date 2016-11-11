@@ -98,6 +98,9 @@ app.get(''); //making the find button
 
 app.post('/register', userCtrl.register);
 app.get('/home', isAuthed, userCtrl.home);
+app.get('/admin-home', isAuthed, userCtrl.home);
+app.get('/edit', isAuthed, userCtrl.edit);
+app.post('/addUser', isAuthed, userCtrl.admin_create_user);
 
 /* ========================
          CONNECTIONS
@@ -105,5 +108,5 @@ app.get('/home', isAuthed, userCtrl.home);
 
 const port = config.PORT;
 app.listen(port, function() {
-    console.log('listening on', port);
+  console.log("listening on", port);
 });

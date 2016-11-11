@@ -6,6 +6,7 @@ const concat = require('gulp-concat');
 const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
 const annotate = require('gulp-ng-annotate');
+const sourcemaps = require('gulp-sourcemaps');
 
 
 // DECLARE FILE PATHS
@@ -20,8 +21,10 @@ const paths = {
 // ============================================================
 gulp.task('js', function () {
   return gulp.src(paths.jsSource) //this is the source of the files i'll manipulate.
+  .pipe(sourcemaps.init())
   .pipe(annotate())
   .pipe(concat('bundle.js'))
+  .pipe(sourcemaps.write())
   .pipe(gulp.dest('./public/dist'))
 })
 

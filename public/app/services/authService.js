@@ -37,6 +37,15 @@ angular.module('orderhound').service("authService", function($http) {
             return response;
         });
     };
+    this.getter = function(addUser) {
+        return $http({
+            method: 'POST',
+            url: '/addUser',
+            data: user
+        }).then(function(response) {
+            return response;
+        });
+    };
 
     this.editUser = function(id, user) {
         return $http({

@@ -1,5 +1,5 @@
 angular.module('orderhound')
-.service('homeService', function ($http) {
+.service('adminService', function ($http) {
 
   this.addpo = function (ponumber) {
     return $http ({

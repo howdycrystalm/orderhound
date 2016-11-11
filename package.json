@@ -24,6 +24,7 @@
     "bcryptjs": "^2.3.0",
     "cookie-parser": "^1.4.3",
     "express-session": "^1.14.2",
+    "gulp-sourcemaps": "^2.2.0",
     "massive": "^2.5.0",
     "passport": "^0.3.2",
     "passport-http": "^0.3.0",
