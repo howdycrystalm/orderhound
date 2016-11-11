@@ -27,7 +27,7 @@ module.exports = {
 		//db.user_create([user.name, user.email, user.password, true], function(err, user) {
 			// If err, send err
 
-			user = user[0];
+			user = user;
 
 			if (err) {
 
@@ -100,7 +100,7 @@ module.exports = {
 		.send('current user not defined');
 
 	// Remove password for security
-	var user = req.user[0];
+	var user = req.user;
 
 
 	delete user.password;
@@ -129,7 +129,7 @@ module.exports = {
 			.send('current user not defined');
 
 		// Remove password for security
-		var user = req.user[0];
+		var user = req.user;
 
 
 		delete user.password;

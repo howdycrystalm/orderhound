@@ -1,3 +1,3 @@
-SELECT *
+SELECT * 
 FROM employee_info
-WHERE id = $1;
+WHERE employee_info.id = $1;

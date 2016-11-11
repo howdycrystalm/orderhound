@@ -51,7 +51,13 @@ function verifyPassword(submitedPass, userPass) {
    });
    passport.deserializeUser(function(id, done) {
      db.user_search_id([id], function(err, user) {
-       done(err, user);
+       db.run('SELECT id FROM checkpoints WHERE employee_id = $1', [user[0].id], function (err, checkpoint) { //in-line sql
+         if(checkpoint.length > 0) {
+           user[0].checkpoint_id = checkpoint[0].id;
+         }
+         console.log(err, user);
+         done(err, user[0]);
+       })
      });
    });
 
