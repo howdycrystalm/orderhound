@@ -55,6 +55,21 @@ module.exports = {
 	// 			.send(user);
 	// 	});
 	// },
+	home: function(req, res, next) {
+	// If user isnt on the session, then return error status
+	if (!req.user) return res.status(401)
+		.send('current user not defined');
+
+	// Remove password for security
+	var user = req.user[0];
+	console.log("USER OBJECT: ",user);
+
+	delete user.password;
+
+	// Return user
+	return res.status(200)
+		.json(user);
+},
 //DO I NEED READ???????????????????????????????
 	read: function(req, res, next) {
 	User.find(req.query, function(err, result) {

@@ -57,7 +57,7 @@ const isAuthed = function(req, res, next) {
     return next();
 };
 
-const isAdmin = function(req, res, next) { //if not admin, dont let go to view
+const isAdmin = function(req, res, next) { //isAdmin middleware should allow access to admin only pages
     if (!req.isAuthenticated() || !req.user.admin) return res.status(401)
         .send();
     return next();
@@ -97,7 +97,7 @@ app.post('/checkin', checkinCtrl.checkin);
 app.get(''); //making the find button
 
 app.post('/register', userCtrl.register);
-app.get('/me', isAuthed, userCtrl.me);
+app.get('/home', isAuthed, userCtrl.home);
 
 /* ========================
          CONNECTIONS

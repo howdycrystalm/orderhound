@@ -9,6 +9,7 @@ angular.module('orderhound')
                     alert('User does not exist');
                     $scope.user.password = '';
                 } else {
+                  console.log("is it running?");
                     $state.go('home'); //takes us to home????
                 }
             }).catch(function(err) {

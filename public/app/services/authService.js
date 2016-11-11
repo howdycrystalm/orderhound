@@ -22,7 +22,7 @@ angular.module('orderhound').service("authService", function($http) {
     this.getCurrentUser = function() {
         return $http({
             method: 'GET',
-            url: '/me'
+            url: '/home'
         }).then(function(response) {
             return response;
         });

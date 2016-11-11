@@ -114,7 +114,7 @@ angular.module('orderhound').service("authService", ["$http", function($http) {
     this.getCurrentUser = function() {
         return $http({
             method: 'GET',
-            url: '/me'
+            url: '/home'
         }).then(function(response) {
             return response;
         });
@@ -174,7 +174,7 @@ angular.module('orderhound').service("userService", ["$http", function($http) {
 }]);
 
 angular.module('orderhound')
-.controller('admin-homeCtrl', ["$scope", "homeService", function ($scope, homeService) {
+.controller('admin-homeCtrl', ["$scope", "adminService", "user", function ($scope, adminService, user) {
 
   $scope.test = homeService.message;
 
@@ -192,7 +192,7 @@ angular.module('orderhound')
 }]);
 
 angular.module('orderhound')
-.controller('homeCtrl', ["$scope", "homeService", function ($scope, homeService) {
+.controller('homeCtrl', ["$scope", "homeService", "user", function ($scope, homeService, user) {
 
   $scope.test = homeService.message;
 
@@ -235,6 +235,7 @@ angular.module('orderhound')
                     alert('User does not exist');
                     $scope.user.password = '';
                 } else {
+                  console.log("is it running?");
                     $state.go('home'); //takes us to home????
                 }
             }).catch(function(err) {
