@@ -6,6 +6,7 @@
   background-size: cover; }
 
 .container {
+  z-index: 0;
   display: flex; }
 
 .div-home {
@@ -63,11 +64,17 @@
   position: absolute; }
 
 .vertical-line {
+  z-index: 1;
   height: 500px;
   border-right: 4px solid #EFE9E9;
-  position: absolute;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
   top: 130px;
-  right: 510px; }
+  left: 50%; }
 
 .drop-down {
   color: #B3B3B3;
@@ -77,15 +84,6 @@
 
 .input-po-position {
   top: 263px; }
-
-.row-align {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  flex-direction: row; }
 
 .add-button {
   width: 168px;
@@ -107,13 +105,11 @@
   position: relative;
   right: 22px; }
 
-.a-find {
+.admin-find {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 20px;
-  position: relative;
-  left: 22px; }
+  padding: 20px; }
 
 .find-button {
   width: 168px;
@@ -180,13 +176,6 @@
   color: #B3B3B3;
   position: relative;
   top: 230px; }
-
-.vertical-line {
-  height: 500px;
-  border-right: 4px solid #EFE9E9;
-  position: absolute;
-  top: 130px;
-  right: 510px; }
 
 .drop-down {
   color: #B3B3B3;

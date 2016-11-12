@@ -98,7 +98,7 @@ app.get(''); //making the find button
 
 app.post('/register', userCtrl.register);
 app.get('/home', isAuthed, userCtrl.home);
-app.get('/admin-home', isAuthed, userCtrl.home);
+app.get('/admin-home', /*isAuthed,*/ userCtrl.home);
 app.get('/edit', isAuthed, userCtrl.edit);
 app.post('/addUser', isAuthed, userCtrl.admin_create_user);
 

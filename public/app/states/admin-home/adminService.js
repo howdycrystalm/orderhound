@@ -10,10 +10,9 @@ angular.module('orderhound')
         checkpoint_id: 1
       }
     }).then(function (response) { //this will pretty much be the same for all of my service functions
-      
+
       return response.data;
     })
- }
+ };
 
-
-})
+});

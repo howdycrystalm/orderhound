@@ -8,6 +8,7 @@
 }
 //.container keeps the view divided in half
 .container {
+  z-index: 0;
   display: flex;
 }
 
@@ -73,11 +74,17 @@
 }
 
 .vertical-line {
+  z-index: 1;
   height: 500px;
   border-right: 4px solid $off-white;
-  position: absolute;
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+  flex-direction: column;
+  position: relative;
   top: 130px;
-  right: 510px;
+  left: 50%;
 }
 
 .drop-down {
@@ -91,15 +98,7 @@
     top: 263px;
 }
 
-.row-align{
-  display: -webkit-flex;
-  display:         flex;
-  -webkit-align-items: center;
-          align-items: center;
-  -webkit-justify-content: space-between;
-          justify-content: space-between;
-  flex-direction: row;
-}
+
 
 .add-button {
   width: $button-width;
@@ -123,13 +122,11 @@
   right: 22px;
 }
 
-.a-find {
+.admin-find {
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 20px;
-  position: relative;
-  left: 22px;
 }
 
 .find-button {
@@ -143,4 +140,5 @@
   color: $off-white;
   position: relative;
   top: 370px;
+
 }
