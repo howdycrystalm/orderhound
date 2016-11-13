@@ -29,15 +29,3 @@ angular.module('orderhound')
 };
 
 });
-
-//trying out new code below
-// this.welcomeAssets = function() {
-//   return $http({
-//     method: 'GET',
-//     url: '/welcomeAssets'
-//   }).then(function(response){ //catching the response from the server
-//     return response.data; //response.data is the info we want
-// });
-// };
-//
-// });
