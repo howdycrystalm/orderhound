@@ -394,7 +394,7 @@ h2:after {
 .register-title {
   font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
   font-size: 30px;
-  color: grey;
+  color: #EFE9E9;
   position: absolute;
   top: 150px;
   left: 10%; }
@@ -403,9 +403,10 @@ h2:after {
   width: 80%;
   font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
   font-size: 21px;
-  color: grey;
+  color: #EFE9E9;
   text-align: justify;
-  position: absolute;
+  position: relative;
+  margin: auto;
   top: 200px; }
 
 .register-container {
@@ -416,6 +417,32 @@ h2:after {
   -webkit-justify-content: center;
   justify-content: center;
   flex-direction: column; }
+
+.input-container {
+  width: 90%;
+  height: 300px; }
+
+.reg-pos-in1 {
+  position: absolute;
+  top: 400px; }
+
+.reg-pos-in2 {
+  position: absolute;
+  top: 505px; }
+
+.register-input-field {
+  width: 375px;
+  height: 53px;
+  border-radius: 8px;
+  border: 2px solid #B3B3B3;
+  background: #EFE9E9;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
+  font-size: 30px;
+  position: relative;
+  text-indent: 10px; }
+
+.clear {
+  clear: both; }
 
 .position-input3 {
   top: 426px; }
@@ -437,4 +464,13 @@ h2:after {
   flex-direction: column;
   color: #EFE9E9;
   position: absolute;
-  top: 650px; }
+  top: 660px;
+  text-align: center;
+  line-height: 41px; }
+
+.move-left {
+  right: 5%;
+  top: 5%; }
+
+.move-right {
+  left: 5%; }

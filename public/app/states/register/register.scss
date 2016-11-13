@@ -19,7 +19,7 @@
 .register-title {
     font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
     font-size: 30px;
-    color: grey;
+    color: $off-white;
     position: absolute;
     top: 150px;
     left: 10%;
@@ -29,9 +29,10 @@
     width: 80%;
     font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
     font-size: 21px;
-    color: grey;
+    color: $off-white;
     text-align: justify;
-    position: absolute;
+    position: relative;
+    margin: auto;
     top: 200px;
 }
 
@@ -43,6 +44,46 @@
   -webkit-justify-content: center;
           justify-content: center;
   flex-direction: column;
+}
+
+// .input-row {
+//   display: -webkit-flex;
+//   display:         flex;
+//   -webkit-align-items: center;
+//           align-items: center;
+//   -webkit-justify-content: center;
+//           justify-content: center;
+//   flex-direction: row;
+// }
+.input-container {
+  width: 90%;
+  height: 300px;
+  // position: absolute;
+  // top: 500px
+}
+.reg-pos-in1 {
+
+  position: absolute;
+  top: 400px;
+}
+.reg-pos-in2 {
+  position: absolute;
+  top: 505px;
+}
+.register-input-field {
+  width: $input-width;
+  height: $input-height;
+  border-radius: $border-radius;
+  border: 2px solid $border-color;
+  background: $off-white;
+  font-family: $font;
+  font-size: $font-size;
+  position: relative;
+  text-indent: $input-indent;
+}
+
+.clear {
+  clear: both;
 }
 
 .position-input3 {
@@ -66,5 +107,102 @@
   flex-direction: column;
   color: $off-white;
   position: absolute;
-  top: 650px;
+  top: 660px;
+  text-align: center;
+line-height: 41px;
 }
+
+.move-left {
+  right: 5%;
+  top: 5%;
+
+}
+.move-right {
+  left: 5%;
+}
+//============================================================
+// @import 'public/app/styles/scss/_main'; //makes my variables from _main.scss available to login.scss.
+// .grey-overlay {
+//   width: 100%;
+//   height: 100vh;
+//   background: rgba(51,51,51, 0.75);
+//   position: absolute;
+// }
+//
+// .register-background {
+//   width: 100%;
+//   height: 100vh;
+//   background-image: url('../../../assets/img/fabric.jpg');
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: cover;
+//   position: relative;
+// }
+//
+// .register-container {
+//   height: 100vh;
+//   display: -webkit-flex;
+//   display:         flex;
+//   -webkit-justify-content: center;
+//           justify-content: center;
+// }
+//
+// .box {
+//   width: 800px;
+//   height: 300px;
+// }
+// .register-title {
+//   font-family: $font;
+//   font-size: $font-size;
+//   color: $off-white;
+//   width: 191px;
+//   height: 37px;
+//   position: relative;
+//   top: 251px;
+// }
+//
+// .register-paragraph {
+//   width: 80vw;
+//   font-family: $font;
+//   font-size: 21px;
+//   color: $off-white;
+//   text-align: justify;
+//   position: relative;
+//   top: 260px;
+// }
+//
+// .clear {
+//   clear: both;
+// }
+//
+// .register-button-teal {
+//   width: $input-width;
+//   height: $input-height;
+//   border-radius: $border-radius;
+//   border: 2px solid $border-color;
+//   background: $teal;
+//   font-family: $font;
+//   font-size: $font-size;
+//   color: $off-white;
+//   position: relative;
+//   top: 550px;
+//   -webkit-justify-content: center;
+//   justify-content: center;
+// }
+//
+// .input-position {
+//   position: relative;
+//   top: 400px;
+// }
+//
+// .register-input-field {
+//     width: $input-width;
+//     height: $input-height;
+//     border-radius: $border-radius;
+//     border: 2px solid $border-color;
+//     background: $off-white;
+//     font-family: $font;
+//     font-size: $font-size;
+//     position: relative;
+//     text-indent: $input-indent;
+// }
