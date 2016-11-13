@@ -43,6 +43,7 @@ dbSetup.run();
 //server-side controller
 const checkinCtrl = require('./controllers/checkinCtrl') //require the controller on server side
 const userCtrl = require('./controllers/userCtrl');
+const checkpointsCtrl = require('./controllers/checkpointsCtrl')
 /* ========================
           SERVICES
    ======================== */
@@ -97,10 +98,11 @@ app.post('/checkin', checkinCtrl.checkin);
 app.get(''); //making the find button
 
 app.post('/register', userCtrl.register);
-app.get('/home', isAuthed, userCtrl.home);
+app.get('/home', /*isAuthed,*/ userCtrl.home);
 app.get('/admin-home', /*isAuthed,*/ userCtrl.home);
-app.get('/edit', isAuthed, userCtrl.edit);
-app.post('/addUser', isAuthed, userCtrl.admin_create_user);
+app.get('/edit', /*isAuthed,*/ userCtrl.edit);
+app.post('/addUser', /*isAuthed,*/ userCtrl.admin_create_user);
+app.get('/checkpoints', /*isAuthed, */checkpointsCtrl.all_from_checkpoints);
 
 /* ========================
          CONNECTIONS

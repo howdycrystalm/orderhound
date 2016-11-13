@@ -14,4 +14,15 @@ angular.module("orderhound").service("editService", function($http) {
           return response;
       });
   };
-});
+  //***********adding dots to map in edit view***********//
+  this.checkpoints = function() {
+    return $http({
+      method: 'GET',
+      url: '/checkpoints',
+      //data: checkpoints
+    }).then(function(response){
+      return response.data;
+    })
+  }
+
+ });

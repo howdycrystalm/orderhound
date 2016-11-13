@@ -76,24 +76,7 @@ module.exports = {
 				.send(userProcessed);
 		});
 	},
-	// registerAdmin: function(req, res, next) {
-	// 	var user = req.body;
-	//
-	// 	// Hash the users password for security
-	// 	user.password = hashPassword(user.password);
-	// 	user.isAdmin = true;
-	//
-	// 	db.admin_create([user.name, user.password, user.isAdmin], function(err, user) {
-	// 		// If err, send err
-	// 		if (err) return res.status(500)
-	// 			.send(err);
-	//
-	// 		// Send user back without password.
-	// 		delete user.password;
-	// 		res.status(200)
-	// 			.send(user);
-	// 	});
-	// },
+	
 	home: function(req, res, next) {
 	// If user isnt on the session, then return error status
 	if (!req.user) return res.status(401)

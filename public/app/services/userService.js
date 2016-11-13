@@ -8,7 +8,7 @@ angular.module('orderhound').service("userService", function($http) {
             return response;
         });
     };
-
+//am i using line 12 function?????
     this.getUser = function(id) {
         return $http({
             method: 'GET',

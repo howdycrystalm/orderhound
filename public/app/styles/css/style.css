@@ -1,3 +1,19 @@
+.horizontal-line-wrapper {
+  display: flex; }
+
+.horizontal-line {
+  width: 700px;
+  height: 10px;
+  background: darkorange;
+  position: relative;
+  top: 150px;
+  -webkit-flex: 1;
+  flex: 1; }
+
+.form-position {
+  position: absolute;
+  bottom: 100px; }
+
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 .background-home {
   width: 100%;
@@ -123,7 +139,6 @@
   position: relative;
   top: 370px; }
 
-
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 .background-home {
   width: 100%;
@@ -235,6 +250,13 @@
   position: relative;
   top: 370px; }
 
+
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+.red-background {
+  width: 100%;
+  height: 100vh;
+  background: #EC4B53; }
+
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 .overlay {
   width: 100%;
@@ -250,15 +272,6 @@
   background-position: center;
   background-size: cover;
   position: relative; }
-
-.vertical-container {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  flex-direction: column; }
 
 .title {
   font-family: "Pacifico", cursive;
@@ -358,10 +371,3 @@ h2:after {
   color: #B3B3B3;
   position: relative;
   top: 600px; }
-
-
-@import url("https://fonts.googleapis.com/css?family=Pacifico");
-.red-background {
-  width: 100%;
-  height: 100vh;
-  background: #EC4B53; }

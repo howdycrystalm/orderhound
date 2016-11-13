@@ -55,6 +55,9 @@ angular.module('orderhound')
                 controller: 'editCtrl',
                 templateUrl: 'app/states/edit/edit.html',
                 resolve: {
+                    checkpoints: function(editService) {
+                      return editService.checkpoints();
+                    },
                     user: function(authService, $state) {
                         return authService.getCurrentUser()
                             .then(function(response) {
