@@ -1,19 +1,3 @@
-.horizontal-line-wrapper {
-  display: flex; }
-
-.horizontal-line {
-  width: 700px;
-  height: 10px;
-  background: darkorange;
-  position: relative;
-  top: 150px;
-  -webkit-flex: 1;
-  flex: 1; }
-
-.form-position {
-  position: absolute;
-  bottom: 100px; }
-
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 .background-home {
   width: 100%;
@@ -138,6 +122,22 @@
   color: #EFE9E9;
   position: relative;
   top: 370px; }
+
+.horizontal-line-wrapper {
+  display: flex; }
+
+.horizontal-line {
+  width: 700px;
+  height: 10px;
+  background: darkorange;
+  position: relative;
+  top: 150px;
+  -webkit-flex: 1;
+  flex: 1; }
+
+.form-position {
+  position: absolute;
+  bottom: 100px; }
 
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 .background-home {
@@ -266,6 +266,15 @@
   background-size: cover;
   position: relative; }
 
+.vertical-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex-direction: column; }
+
 .title {
   font-family: "Pacifico", cursive;
   font-size: 65px;
@@ -367,7 +376,65 @@ h2:after {
 
 
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
-.red-background {
+.grey-overlay {
   width: 100%;
   height: 100vh;
-  background: #EC4B53; }
+  background: rgba(51, 51, 51, 0.75);
+  position: absolute; }
+
+.register-background {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../../assets/img/fabric.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative; }
+
+.register-title {
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
+  font-size: 30px;
+  color: grey;
+  position: absolute;
+  top: 150px;
+  left: 10%; }
+
+.register-paragraph {
+  width: 80%;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
+  font-size: 21px;
+  color: grey;
+  text-align: justify;
+  position: absolute;
+  top: 200px; }
+
+.register-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex-direction: column; }
+
+.position-input3 {
+  top: 426px; }
+
+.register-button-teal {
+  width: 375px;
+  height: 53px;
+  border-radius: 8px;
+  border: 2px solid #B3B3B3;
+  background: #00BBB3;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
+  font-size: 30px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  flex-direction: column;
+  color: #EFE9E9;
+  position: absolute;
+  top: 650px; }

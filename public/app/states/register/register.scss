@@ -1,7 +1,70 @@
 @import 'public/app/styles/scss/_main'; //makes my variables from _main.scss available to login.scss.
-
-.red-background {
+.grey-overlay {
   width: 100%;
   height: 100vh;
-  background: $soft-red;
+  background: rgba(51,51,51, 0.75);
+  position: absolute;
+}
+
+.register-background {
+  width: 100%;
+  height: 100vh;
+  background-image: url('../../../assets/img/fabric.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.register-title {
+    font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
+    font-size: 30px;
+    color: grey;
+    position: absolute;
+    top: 150px;
+    left: 10%;
+}
+
+.register-paragraph {
+    width: 80%;
+    font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
+    font-size: 21px;
+    color: grey;
+    text-align: justify;
+    position: absolute;
+    top: 200px;
+}
+
+.register-container {
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  flex-direction: column;
+}
+
+.position-input3 {
+  top: 426px;
+}
+
+.register-button-teal {
+  width: $input-width;
+  height: $input-height;
+  border-radius: $border-radius;
+  border: 2px solid $border-color;
+  background: $teal;
+  font-family: $font;
+  font-size: $font-size;
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  flex-direction: column;
+  color: $off-white;
+  position: absolute;
+  top: 650px;
 }
