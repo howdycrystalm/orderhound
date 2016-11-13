@@ -8,7 +8,6 @@ angular.module('orderhound')
   }
 //***********************************************************************************//
         $scope.login = function(user) {
-
             authService.login(user).then(function(response) {
 
                 if (!response.data) {

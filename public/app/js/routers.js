@@ -14,6 +14,9 @@ angular.module('orderhound')
                 controller: 'homeCtrl',
                 templateUrl: 'app/states/home/home.html',
                 resolve: {
+                    welcomeAssets: function(homeService) {
+                      return homeService.welcomeAssets();
+                    },
                     user: function(authService, $state) {
                         return authService.getCurrentUser()
                             .then(function(response) {

@@ -1,2 +1,2 @@
 select *
-from in_production;
+from testing123;

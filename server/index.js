@@ -41,9 +41,10 @@ dbSetup.run();
          CONTROLLERS
    ======================== */
 //server-side controller
-const checkinCtrl = require('./controllers/checkinCtrl') //require the controller on server side
+const checkinCtrl = require('./controllers/checkinCtrl'); //requires the controller on server side
 const userCtrl = require('./controllers/userCtrl');
-const checkpointsCtrl = require('./controllers/checkpointsCtrl')
+const checkpointsCtrl = require('./controllers/checkpointsCtrl');
+const welcomeAssetsCtrl = require('./controllers/welcomeAssetsCtrl');
 /* ========================
           SERVICES
    ======================== */
@@ -103,7 +104,7 @@ app.get('/admin-home', /*isAuthed,*/ userCtrl.home);
 app.get('/edit', /*isAuthed,*/ userCtrl.edit);
 app.post('/addUser', /*isAuthed,*/ userCtrl.admin_create_user);
 app.get('/checkpoints', /*isAuthed, */checkpointsCtrl.all_from_checkpoints);
-
+app.get('/welcomeAssets', /*isAuthed, */welcomeAssetsCtrl.welcome_assets);
 /* ========================
          CONNECTIONS
    ======================== */

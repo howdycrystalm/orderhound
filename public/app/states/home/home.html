@@ -1,9 +1,14 @@
 <section class="background-home container font-thickness-adjust">
   <div class="vertical-line"></div>
   <div class="div-home left-half">
-    <div class="welcome-title">Welcome, {{user.name}}</div>
+    <!--¡¡¡¡¡¡¡¡I NEED A DIV WITH NG-REPEAT ¡¡¡¡¡¡ -->
+    <div class="welcome-title">Welcome, {{welcomeAssets.employee_name}}</div>
+
+    <!-- below add user pictire using {{something.something-photo}} -->
     <img src="http://www.interviewmagazine.com/files/2009/05/21/img-bjork-fig-1_110739349400.jpg" class="user-photo" alt= "user photo"/>
-    <div class="station-name">Station: {{checkPointName}}</div>
+    <div class="station-name">Station: {{welcomeAssets.checkpoint_name}}</div>
+
+  </div>
   </div>
   <div class="div-home right-half">
     <div class="drop-down"><i class="fa fa fa-ellipsis-h fa-3x" aria-hidden="true" ></i></div>

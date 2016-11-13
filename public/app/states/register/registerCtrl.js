@@ -2,7 +2,7 @@ angular.module('orderhound')
 .controller('registerCtrl', function($scope, authService, $state) {
 //
 //       $scope.register = function(user) {
-//           
+//
 //           authService.login(user).then(function(response) {
 //               if (!response.data) {
 //                   alert('User does not exist');
@@ -18,7 +18,6 @@ angular.module('orderhound')
 // });
 
 $scope.register = function(user) {
-  
   authService.registerUser(user).then(function(response) {
     if (!response.data) {
       alert('Unable to create user');

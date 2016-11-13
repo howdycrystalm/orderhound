@@ -5,7 +5,7 @@ angular.module("orderhound").service("editService", function($http) {
   // CRUD FUNCTIONS
   // ============================================================
 
-  this.addUser = function(addUser) {
+this.addUser = function(addUser) {
       return $http({
           method: 'POST',
           url: '/addUser',
@@ -14,7 +14,7 @@ angular.module("orderhound").service("editService", function($http) {
           return response;
       });
   };
-  //***********adding dots to map in edit view***********//
+  //***********adding dots to image of map in edit view***********//
   this.checkpoints = function() {
     return $http({
       method: 'GET',
@@ -22,7 +22,7 @@ angular.module("orderhound").service("editService", function($http) {
       //data: checkpoints
     }).then(function(response){
       return response.data;
-    })
-  }
+    });
+  };
 
  });

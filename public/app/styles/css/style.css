@@ -250,13 +250,6 @@
   position: relative;
   top: 370px; }
 
-
-@import url("https://fonts.googleapis.com/css?family=Pacifico");
-.red-background {
-  width: 100%;
-  height: 100vh;
-  background: #EC4B53; }
-
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 .overlay {
   width: 100%;
@@ -371,3 +364,10 @@ h2:after {
   color: #B3B3B3;
   position: relative;
   top: 600px; }
+
+
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+.red-background {
+  width: 100%;
+  height: 100vh;
+  background: #EC4B53; }
