@@ -1,7 +1,5 @@
 <div class="edit-background">
 <div class="div-home">
-  <h1>you are on the edit view</h1>
-  <h2>assign users to checkpoints</h2>
   <div class="horizontal-line-wrapper">
 
     <div class="horizontal-line"></div>
@@ -10,7 +8,25 @@
   </div>
 
 
-  <div class="form-position">
+  <div class="reg-pos-in1">
+      <input type="text" placeholder="Username" class="register-input-field move-left" ng-model="obj.name" required/>
+      <input type="password" placeholder="Password" class="register-input-field move-right" ng-model="obj.password" required/>
+  </div>
+  <div class="clear"></div>
+  <div class="reg-pos-in2">
+      <input type="text" placeholder="Checkpoint" class="register-input-field move-left" ng-model="obj.checkPoint" required/>
+      <input type="text" placeholder="User Photo" class="register-input-field move-right" ng-model="obj.photo" required/>
+  </div>
+  <div class="checkbox-position">
+  Make Admin: <input type="checkbox" ng-model="obj.admin"/>
+ </div>
+ <div class="row-align">
+   <a href="/" type="button" class="edit-add-button row-align edit-add-position" ng-click="getter(obj)">Make User <i class="fa fa-user-plus" aria-hidden="true" fa-lg></i></a>
+   <a href="/" type="button" class="edit-delete-button row-align edit-delete-position">Delete User<i class="fa fa-trash" aria-hidden="true" fa-lg></i></a>
+
+ </div>
+    <!-- <input type="submit" class="register-button-teal" ng-click="getter(obj)"> -->
+  <!-- <div class="form-position">
     <form ng-submit="getter(obj)">
       Username: <input type="text" ng-model="obj.name" required/>
       Password: <input type="password" ng-model="obj.password" required/>
@@ -21,4 +37,4 @@
     </form>
   </div>
 </div>
-</div>
+</div> -->
