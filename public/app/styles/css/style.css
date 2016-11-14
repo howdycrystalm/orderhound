@@ -125,7 +125,7 @@
 
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 .edit-background {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background: #00BBB3;
   background-repeat: no-repeat;
@@ -133,13 +133,25 @@
   background-size: cover;
   position: relative; }
 
+.horizontal-line-wrapper {
+  display: flex; }
+
+.rectangle {
+  width: 700px;
+  height: 200px;
+  background: darkorange;
+  position: relative;
+  top: 150px;
+  -webkit-flex: 1;
+  flex: 1; }
+
 .checkbox-position {
   font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
   font-size: 30px;
   color: #EFE9E9;
   position: absolute;
   top: 585px;
-  right: 745px; }
+  left: 672px; }
 
 .edit-add-button {
   width: 240px;
@@ -154,9 +166,9 @@
   align-items: center;
   justify-content: space-around;
   padding: 20px;
-  position: relative;
-  top: 630px;
-  right: 183px; }
+  position: absolute;
+  top: 670px;
+  right: 208px; }
 
 .edit-delete-button {
   width: 240px;
@@ -171,21 +183,16 @@
   align-items: center;
   justify-content: space-around;
   padding: 20px;
-  position: relative;
-  top: 630px;
-  left: 183px; }
+  position: absolute;
+  top: 670px;
+  left: 208px; }
 
-.horizontal-line-wrapper {
-  display: flex; }
-
-.horizontal-line {
-  width: 700px;
+.dot {
+  background: blue;
+  width: 10px;
   height: 10px;
-  background: darkorange;
-  position: relative;
-  top: 150px;
-  -webkit-flex: 1;
-  flex: 1; }
+  border-radius: 50%;
+  position: absolute; }
 
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 .background-home {
@@ -419,8 +426,8 @@ h2:after {
   font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
   font-size: 24px;
   color: #B3B3B3;
-  position: relative;
-  top: 600px; }
+  position: absolute;
+  top: 680px; }
 
 
 @import url("https://fonts.googleapis.com/css?family=Pacifico");

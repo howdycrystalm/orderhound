@@ -21,6 +21,7 @@
     "gulp-watch": "^4.3.10"
   },
   "dependencies": {
+    "angular-simple-sidebar": "^1.3.0",
     "bcryptjs": "^2.3.0",
     "cookie-parser": "^1.4.3",
     "express-session": "^1.14.2",

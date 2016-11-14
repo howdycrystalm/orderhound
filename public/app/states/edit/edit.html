@@ -1,10 +1,10 @@
 <div class="edit-background">
 <div class="div-home">
-  <div class="horizontal-line-wrapper">
+  <div class="rectangle">
 
     <div class="horizontal-line"></div>
     <!-- just skeleton code, need to write css for .dots. reference: https://css-tricks.com/using-angularjs-for-data-visualisations/-->
-    <div class="dots" ng-repeat="checkpoint in checkpoints">{{checkpoint}}</div>
+    <div ng-repeat="checkpoint in checkpoints">{{checkpoint}}</div>
   </div>
 
 
@@ -25,16 +25,3 @@
    <a href="/" type="button" class="edit-delete-button row-align edit-delete-position">Delete User<i class="fa fa-trash" aria-hidden="true" fa-lg></i></a>
 
  </div>
-    <!-- <input type="submit" class="register-button-teal" ng-click="getter(obj)"> -->
-  <!-- <div class="form-position">
-    <form ng-submit="getter(obj)">
-      Username: <input type="text" ng-model="obj.name" required/>
-      Password: <input type="password" ng-model="obj.password" required/>
-      Checkpoint: <input type="text" ng-model="obj.checkPoint" required/>
-      User Photo: <input type="text" ng-model="obj.photo" required/>
-      Admin: <input type="checkbox" ng-model="obj.admin"/>
-      <button type="submit">make user and checkpoint</button>
-    </form>
-  </div>
-</div>
-</div> -->

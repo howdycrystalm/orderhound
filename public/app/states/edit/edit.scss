@@ -1,7 +1,7 @@
 @import 'public/app/styles/scss/_main';
 
 .edit-background {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background: $teal;
   background-repeat: no-repeat;
@@ -10,13 +10,29 @@
   position: relative;
 }
 
+
+.horizontal-line-wrapper {
+  display: flex;
+}
+
+.rectangle {
+  width: 700px;
+  height: 200px;
+  background: darkorange;
+  position:relative;
+  top: 150px;
+  -webkit-flex: 1;
+  flex:1;
+}
+
+//============form styling below========================
 .checkbox-position {
     font-family: $font;
     font-size: $font-size;
     color: $off-white;
     position: absolute;
     top: 585px;
-    right: 745px;
+    left: 672px;
 }
 
 .edit-add-button {
@@ -32,9 +48,9 @@
   align-items: center;
   justify-content: space-around;
   padding: 20px;
-  position: relative;
-  top: 630px;
-  right: 183px;
+  position: absolute;
+  top: 670px;
+  right: 208px;
 }
 
 
@@ -51,23 +67,15 @@
     align-items: center;
     justify-content: space-around;
     padding: 20px;
-    position: relative;
-    top: 630px;
-    left: 183px;
-
+    position: absolute;
+    top: 670px;
+    left: 208px;
   }
 
-
-.horizontal-line-wrapper {
-  display: flex;
-}
-
-.horizontal-line {
-  width: 700px;
-  height: 10px;
-  background: darkorange;
-  position:relative;
-  top: 150px;
-  -webkit-flex: 1;
-  flex:1;
-}
+  .dot {
+    background: blue;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+  }
