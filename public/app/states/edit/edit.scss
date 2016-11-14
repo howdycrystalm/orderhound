@@ -15,10 +15,19 @@
   display: flex;
 }
 
+.horizontal-line {
+  width: 700px;
+  height: 30px;
+  background: $med-grey;
+  position: absolute;
+  top: 300px;
+
+
+}
 .rectangle {
   width: 700px;
   height: 200px;
-  background: darkorange;
+  background: $teal;
   position:relative;
   top: 150px;
   -webkit-flex: 1;
@@ -48,8 +57,8 @@
   align-items: center;
   justify-content: space-around;
   padding: 20px;
-  position: absolute;
-  top: 670px;
+  position: relative;
+  top: 450px;
   right: 208px;
 }
 
@@ -67,15 +76,15 @@
     align-items: center;
     justify-content: space-around;
     padding: 20px;
-    position: absolute;
-    top: 670px;
+    position: relative;
+    top: 450px;
     left: 208px;
-  }
+}
 
   .dot {
     background: blue;
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    position: absolute;
+    display: inline-block;
   }
