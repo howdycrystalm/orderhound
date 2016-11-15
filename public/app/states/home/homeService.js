@@ -19,14 +19,14 @@ angular.module('orderhound')
     });
  };
  //adding PO# when user clicks find
- this.findpo = function(find) {
+ this.findpo = function(po_number) {
    return $http({
      method: 'POST',
-     url: '/find',
-     data: { //this is the body! req.body on the other side, the server side
-       namethiswhatever: what, //this is not that. its variable in line 4
-       //checkpoint_id: 1 //this will work as long as the first checkpoint is never deleted. later on, we can figure out how to fix that.
-     }
+     url: '/find'/*,*/
+    //  data: { //this is the body! req.body on the other side, the server side
+    //    find_po: find_po, //this is not that. its variable in line 4
+    //    //checkpoint_id: 1 //this will work as long as the first checkpoint is never deleted. later on, we can figure out how to fix that.
+    //  }
    }).then(function(response){ //catching the response from the server
      return response.data; //response.data is the info we want
  });

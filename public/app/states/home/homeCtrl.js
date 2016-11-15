@@ -11,7 +11,7 @@ angular.module('orderhound')
   };
 //****************attempting to make find button *********************//
 $scope.findpo = function (findNum) {
-  homeService.addpo(findNum).then(function (response) {
+  homeService.findpo(findNum).then(function (response) {
     //make a confirmation message, like checkin confirmed
 
   })
