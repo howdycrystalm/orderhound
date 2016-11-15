@@ -1,0 +1,6 @@
+@import 'public/app/styles/scss/_main'; //makes my variables from _main.scss available to login.scss.
+.map-background {
+  width: 100vw;
+  height: 100vh;
+  background: $dark-blue;
+}

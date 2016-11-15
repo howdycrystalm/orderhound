@@ -79,6 +79,9 @@ angular.module('orderhound')
                 controller: 'mapCtrl',
                 templateUrl: 'app/states/map/map.html',
                 resolve: {
+                    // findpo: function(homeService) {
+                    //   return mapService.findpo();
+                    // },
                     user: function(authService, $state) {
                         return authService.getCurrentUser()
                             .then(function(response) {

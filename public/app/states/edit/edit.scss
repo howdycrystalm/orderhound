@@ -10,6 +10,14 @@
   position: relative;
 }
 
+.edit-container {
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+  flex-direction: column;
+}
+
 
 .horizontal-line-wrapper {
   display: flex;
@@ -19,7 +27,6 @@
   width: 700px;
   height: 30px;
   background: $med-grey;
-  position: absolute;
   top: 300px;
 
 

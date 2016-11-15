@@ -1,10 +1,14 @@
-<div class="edit-background">
+<div class="edit-background font-thickness-adjust">
+<div class="edit-container">
+ <div class="rectangle">
 
-  <div class="rectangle">
-
+   <div ng-repeat="checkpoint in checkpoints">
+     {{checkpoint}}<br>
+     <div class="dot"></div>
+   </div><br>
     <div class="horizontal-line"></div>
     <!-- just skeleton code, need to write css for .dots. reference: https://css-tricks.com/using-angularjs-for-data-visualisations/-->
-    <div class="dot" ng-repeat="checkpoint in checkpoints">{{checkpoint}}</div>
+
   </div>
 
 
@@ -25,3 +29,5 @@
    <a href="/" type="button" class="edit-delete-button row-align edit-delete-position">Delete User<i class="fa fa-trash" aria-hidden="true" fa-lg></i></a>
 
  </div>
+</div>
+</div>

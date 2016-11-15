@@ -1,4 +1,88 @@
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
+.edit-background {
+  width: 100vw;
+  height: 100vh;
+  background: #00BBB3;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative; }
+
+.edit-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: column; }
+
+.horizontal-line-wrapper {
+  display: flex; }
+
+.horizontal-line {
+  width: 700px;
+  height: 30px;
+  background: #B3B3B3;
+  top: 300px; }
+
+.rectangle {
+  width: 700px;
+  height: 200px;
+  background: #00BBB3;
+  position: relative;
+  top: 150px;
+  -webkit-flex: 1;
+  flex: 1; }
+
+.checkbox-position {
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
+  font-size: 30px;
+  color: #EFE9E9;
+  position: absolute;
+  top: 585px;
+  left: 672px; }
+
+.edit-add-button {
+  width: 240px;
+  height: 53px;
+  border-radius: 8px;
+  border: 2px solid #B3B3B3;
+  background: #00BBB3;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
+  font-size: 30px;
+  color: #EFE9E9;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  position: relative;
+  top: 450px;
+  right: 208px; }
+
+.edit-delete-button {
+  width: 240px;
+  height: 53px;
+  border-radius: 8px;
+  border: 2px solid #B3B3B3;
+  background: #bd141c;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
+  font-size: 30px;
+  color: #EFE9E9;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  position: relative;
+  top: 450px;
+  left: 208px; }
+
+.dot {
+  background: blue;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block; }
+
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
 .background-home {
   width: 100%;
   height: 100vh;
@@ -122,84 +206,6 @@
   color: #EFE9E9;
   position: relative;
   top: 370px; }
-
-@import url("https://fonts.googleapis.com/css?family=Pacifico");
-.edit-background {
-  width: 100vw;
-  height: 100vh;
-  background: #00BBB3;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative; }
-
-.horizontal-line-wrapper {
-  display: flex; }
-
-.horizontal-line {
-  width: 700px;
-  height: 30px;
-  background: #B3B3B3;
-  position: absolute;
-  top: 300px; }
-
-.rectangle {
-  width: 700px;
-  height: 200px;
-  background: #00BBB3;
-  position: relative;
-  top: 150px;
-  -webkit-flex: 1;
-  flex: 1; }
-
-.checkbox-position {
-  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
-  font-size: 30px;
-  color: #EFE9E9;
-  position: absolute;
-  top: 585px;
-  left: 672px; }
-
-.edit-add-button {
-  width: 240px;
-  height: 53px;
-  border-radius: 8px;
-  border: 2px solid #B3B3B3;
-  background: #00BBB3;
-  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
-  font-size: 30px;
-  color: #EFE9E9;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 20px;
-  position: relative;
-  top: 450px;
-  right: 208px; }
-
-.edit-delete-button {
-  width: 240px;
-  height: 53px;
-  border-radius: 8px;
-  border: 2px solid #B3B3B3;
-  background: #bd141c;
-  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
-  font-size: 30px;
-  color: #EFE9E9;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 20px;
-  position: relative;
-  top: 450px;
-  left: 208px; }
-
-.dot {
-  background: blue;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  display: inline-block; }
 
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 .background-home {
@@ -436,6 +442,11 @@ h2:after {
   position: absolute;
   top: 680px; }
 
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+.map-background {
+  width: 100vw;
+  height: 100vh;
+  background: #2F4461; }
 
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 .grey-overlay {

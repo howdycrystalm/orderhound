@@ -9,6 +9,14 @@ angular.module('orderhound')
 
     })
   };
+//****************attempting to make find button *********************//
+$scope.findpo = function (findNum) {
+  homeService.addpo(findNum).then(function (response) {
+    //make a confirmation message, like checkin confirmed
+
+  })
+};
+
 //*****gives view employee_name, photo, checkpoint_name for the welcome message in home view from databse*****//
   $scope.welcomeAssets = function() {
     //call the function that's in service

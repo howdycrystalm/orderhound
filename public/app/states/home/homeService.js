@@ -18,6 +18,19 @@ angular.module('orderhound')
       return response.data;
     });
  };
+ //adding PO# when user clicks find
+ this.findpo = function(find) {
+   return $http({
+     method: 'POST',
+     url: '/find',
+     data: { //this is the body! req.body on the other side, the server side
+       namethiswhatever: what, //this is not that. its variable in line 4
+       //checkpoint_id: 1 //this will work as long as the first checkpoint is never deleted. later on, we can figure out how to fix that.
+     }
+   }).then(function(response){ //catching the response from the server
+     return response.data; //response.data is the info we want
+ });
+ };
 //getting user's name to add to welcome message
   this.welcomeAssets = function() {
     return $http({
@@ -27,5 +40,8 @@ angular.module('orderhound')
       return response.data; //response.data is the info we want
   });
 };
+
+
+
 
 });
