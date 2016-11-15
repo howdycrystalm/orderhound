@@ -1,4 +1,30 @@
 <section class="background-home container font-thickness-adjust">
+
+<div class="menu-position">
+
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Home</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "186px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+</div>
+<!-- ABOVE IS CODE FOR SLIDE OUT MENU -->
   <div class="vertical-line"></div>
   <div class="div-home left-half">
     <!--¡¡¡¡¡¡¡¡I NEED A DIV WITH NG-REPEAT ¡¡¡¡¡¡ -->
@@ -6,13 +32,13 @@
     <div class="welcome-title">Welcome, {{response[1].employee_name}}</div>
 
     <!-- below add user pictire using {{something.something-photo}} -->
-    <img src="http://www.interviewmagazine.com/files/2009/05/21/img-bjork-fig-1_110739349400.jpg" class="user-photo" alt= "user photo"/>
+    <img class="user-photo" src="{{response[1].photo}}" alt= "user photo"/>
     <div class="station-name">Station: {{response[1].checkpoint_name}}</div>
 
   <!-- </div> -->
   </div>
   <div class="div-home right-half">
-    <div class="drop-down"><i class="fa fa fa-ellipsis-h fa-3x" aria-hidden="true" ></i></div>
+    <span class="menu-button rotate" onclick="openNav()"><i class="fa fa fa-ellipsis-h fa-3x" aria-hidden="true" ></i></span>
     <input type="text"  placeholder="PO#" class="input-field input-po-position" ng-model="ponum"/>
     <div class="row-align">
       <a href="/" type="button" class="add-button a-add row-align" ng-click="addpo(ponum)">Add <i class="fa fa-plus" aria-hidden="true" fa-lg></i></a>
@@ -21,6 +47,7 @@
     </div>
   </div>
 </section>
+<!-- =============================================== -->
 
 <!--uncomment this once get views set up  -->
 <!-- <div>this is the add po view</div>

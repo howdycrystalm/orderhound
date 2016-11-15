@@ -1,13 +1,24 @@
 angular.module('orderhound')
-.controller('editCtrl', function($scope, editService, $state, checkpoints) {
-//got help from lucas withi this
+.controller('editCtrl', function($scope, editService, $state, checkpoints, authService) {
     $scope.obj = {};//do i need this still????
 
     $scope.getter = function(addUser){
       editService.addUser(addUser).then(function(response) {
         //everything that happens AFTER goes here, like clear form, $state.go
-      })
+        if (!response.data) {
+          alert('Unable to create user');
+        }
+        else if (response.data){
+          alert('User Created! Please Login.');
+          $scope.newUser = {};
+          $state.go('login');
+        }
+      }).catch(function(err) {
+        alert('Unable to create user');
+      });
     };
+
+
 //*****************adding dots to map in edit view*******************//
     $scope.checkpoints = checkpoints;
     console.log($scope.checkpoints);

@@ -23,9 +23,9 @@ $scope.register = function(user) {
       alert('Unable to create user');
     }
     else if (response.data){
-      alert('User Created');
-      $scope.newUser = {};
-      $state.go('edit');
+      alert('User Created! Please login.');
+      // $scope.newUser = {};
+      $state.go('login');
     }
   }).catch(function(err) {
     alert('Unable to create user');
