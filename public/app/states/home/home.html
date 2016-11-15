@@ -39,10 +39,10 @@ function closeNav() {
   </div>
   <div class="div-home right-half">
     <span class="menu-button rotate" onclick="openNav()"><i class="fa fa fa-ellipsis-h fa-3x" aria-hidden="true" ></i></span>
-    <input type="text"  placeholder="PO#" class="input-field input-po-position" ng-model="ponum"/>
+    <input type="number"  placeholder="PO#" class="input-field input-po-position" ng-model="ponum"/>
     <div class="row-align">
       <a href="/" type="button" class="add-button a-add row-align" ng-click="addpo(ponum)">Add <i class="fa fa-plus" aria-hidden="true" fa-lg></i></a>
-      <a href="/" type="button" class="find-button a-find row-align" ng-click="findpo(findNum)">Find <i class="fa fa-search" aria-hidden="true" fa-lg></i></a>
+      <a href="/" type="button" class="find-button a-find row-align" ng-click="findpo(ponum)">Find <i class="fa fa-search" aria-hidden="true" fa-lg></i></a>
       <!-- <a href="/" type="button" class="find-button a-find row-align">Find <i class="fa fa-search" aria-hidden="true" fa-lg></i></a> -->
     </div>
   </div>

@@ -22,7 +22,8 @@ angular.module('orderhound')
  this.findpo = function(po_number) {
    return $http({
      method: 'POST',
-     url: '/find'/*,*/
+     url: '/find'/*,*/,
+     data: {ponumber: po_number}
     //  data: { //this is the body! req.body on the other side, the server side
     //    find_po: find_po, //this is not that. its variable in line 4
     //    //checkpoint_id: 1 //this will work as long as the first checkpoint is never deleted. later on, we can figure out how to fix that.

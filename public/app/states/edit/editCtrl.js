@@ -9,9 +9,8 @@ angular.module('orderhound')
           alert('Unable to create user');
         }
         else if (response.data){
-          alert('User Created! Please Login.');
-          $scope.newUser = {};
-          $state.go('login');
+          alert('User Created!');
+          $state.reload('edit');
         }
       }).catch(function(err) {
         alert('Unable to create user');

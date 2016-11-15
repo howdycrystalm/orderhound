@@ -55,7 +55,6 @@ function verifyPassword(submitedPass, userPass) {
          if(checkpoint.length > 0) {
            user[0].checkpoint_id = checkpoint[0].id;
          }
-         console.log(err, user);
          done(err, user[0]);
        })
      });
