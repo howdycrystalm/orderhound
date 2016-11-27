@@ -1,86 +1,43 @@
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
-.edit-background {
-  width: 100vw;
-  height: 100vh;
-  background: #00BBB3;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative; }
+.menu body {
+  font-family: "Lato", sans-serif; }
 
-.edit-container {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  flex-direction: column; }
-
-.horizontal-line-wrapper {
-  display: flex; }
-
-.horizontal-line {
-  width: 700px;
-  height: 30px;
-  background: #B3B3B3;
-  top: 300px; }
-
-.rectangle {
-  width: 700px;
-  height: 200px;
-  background: #00BBB3;
+.menu-button .fa-caret-left:before {
+  content: "\f0d9";
+  color: #B3B3B3;
   position: relative;
-  top: 150px;
-  -webkit-flex: 1;
-  flex: 1; }
+  left: 285px;
+  top: -10px; }
 
-.checkbox-position {
-  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
-  font-size: 30px;
-  color: #EFE9E9;
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px; }
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 50px;
+  color: #818181;
+  display: block;
+  transition: 0.3s; }
+
+.sidenav a:hover, .offcanvas a:focus {
+  color: #f1f1f1; }
+
+.closebtn {
   position: absolute;
-  top: 585px;
-  left: 672px; }
-
-.edit-add-button {
-  width: 240px;
-  height: 53px;
-  border-radius: 8px;
-  border: 2px solid #B3B3B3;
-  background: #00BBB3;
-  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
-  font-size: 30px;
-  color: #EFE9E9;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 20px;
-  position: relative;
-  top: 450px;
-  right: 208px; }
-
-.edit-delete-button {
-  width: 240px;
-  height: 53px;
-  border-radius: 8px;
-  border: 2px solid #B3B3B3;
-  background: #bd141c;
-  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
-  font-size: 30px;
-  color: #EFE9E9;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 20px;
-  position: relative;
-  top: 450px;
-  left: 208px; }
-
-.dot {
-  background: blue;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  display: inline-block; }
+  top: 0;
+  right: 5px;
+  margin-left: 50px;
+  color: #EFE9E9; }
 
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 .background-home {
@@ -208,6 +165,90 @@
   top: 370px; }
 
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
+.edit-background {
+  width: 100vw;
+  height: 100vh;
+  background: #00BBB3;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative; }
+
+.edit-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: column; }
+
+.horizontal-line-wrapper {
+  display: flex; }
+
+.horizontal-line {
+  width: 700px;
+  height: 30px;
+  background: #B3B3B3;
+  top: 300px; }
+
+.rectangle {
+  width: 700px;
+  height: 200px;
+  background: #00BBB3;
+  position: relative;
+  top: 150px;
+  -webkit-flex: 1;
+  flex: 1; }
+
+.checkbox-position {
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
+  font-size: 30px;
+  color: #EFE9E9;
+  position: absolute;
+  top: 585px;
+  left: 672px; }
+
+.edit-add-button {
+  width: 240px;
+  height: 53px;
+  border-radius: 8px;
+  border: 2px solid #B3B3B3;
+  background: #00BBB3;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
+  font-size: 30px;
+  color: #EFE9E9;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  position: relative;
+  top: 450px;
+  right: 208px; }
+
+.edit-delete-button {
+  width: 240px;
+  height: 53px;
+  border-radius: 8px;
+  border: 2px solid #B3B3B3;
+  background: #bd141c;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", sans-serif;
+  font-size: 30px;
+  color: #EFE9E9;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  position: relative;
+  top: 450px;
+  left: 208px; }
+
+.dot {
+  background: blue;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block; }
+
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
 .background-home {
   width: 100%;
   height: 100vh;
@@ -317,52 +358,6 @@
   color: #EFE9E9;
   position: relative;
   top: 370px; }
-
-.menu-position {
-  position: absolute;
-  width: 170px; }
-
-.menu-button {
-  font-size: 18px;
-  cursor: pointer;
-  color: #B3B3B3;
-  position: relative;
-  left: 197px;
-  top: 19px; }
-
-.rotate {
-  display: block;
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg); }
-
-.sidenav {
-  background: #2F4461;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  right: 0px;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 25px; }
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: red;
-  display: block;
-  transition: 0.3s; }
-
-.sidenav a:hover, .offcanvas a:focus {
-  color: #f1f1f1; }
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px; }
 
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 .overlay {

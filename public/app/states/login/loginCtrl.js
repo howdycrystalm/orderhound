@@ -2,10 +2,10 @@ angular.module('orderhound')
     .controller('loginCtrl', function($scope, authService, $state) {
         $scope.test = "major tom to ground control";
 //**********************DELETE THIS BEFORE PRESENTING AND HOSTING*********************//
-  $scope.user = {
-    name: 'Quinn',
-    password: 'q'
-  }
+  // $scope.user = {
+  //   name: 'Quinn',
+  //   password: 'q'
+  // }
 //***********************************************************************************//
         $scope.login = function(user) {
             authService.login(user).then(function(response) {

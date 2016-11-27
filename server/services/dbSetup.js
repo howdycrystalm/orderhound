@@ -3,8 +3,8 @@ var db = app.get('db');
 
 module.exports = {
     run: function () {
-      
 
-      db.user_table_initialize(function(err, table) {})
+console.log("cool");
+      // db.user_table_initialize(function(err, table) {})
     }
 };

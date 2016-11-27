@@ -38,7 +38,7 @@ angular.module('orderhound')
       method: 'GET',
       url: '/welcomeAssets'
     }).then(function(response){ //catching the response from the server
-      return response.data; //response.data is the info we want
+      return response; //response.data is the info we want
   });
 };
 

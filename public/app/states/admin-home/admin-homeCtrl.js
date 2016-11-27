@@ -21,7 +21,8 @@ angular.module('orderhound')
       homeService.welcomeAssets() //now we're calling welcomeAssets in the homeService, from homeCtrl
       .then(function(response) {
         console.log('this is our response', response)
-        $scope.response = response;
+        console.log(response.data[1].employee_name + " HELLLLLLLOOOO");
+        $scope.response = response.data;
 
       })
     }
