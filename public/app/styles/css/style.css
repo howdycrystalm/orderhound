@@ -1,42 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
-.menu body {
-  font-family: "Lato", sans-serif; }
-
-.menu-button .fa-caret-left:before {
-  content: "\f0d9";
-  color: #B3B3B3;
-  position: relative;
-  left: 285px;
-  top: -50px; }
-
-.sidenav {
-  height: 30%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  background: rgba(48, 68, 97, 0.87);
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px; }
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 50px;
-  color: #818181;
-  display: block;
-  transition: 0.3s; }
-
-.closebtn {
-  position: absolute;
-  top: 0;
-  right: 5px;
-  margin-left: 50px;
-  color: #EFE9E9; }
-
-@import url("https://fonts.googleapis.com/css?family=Pacifico");
 .background-home {
   width: 100%;
   height: 100vh;
@@ -585,3 +547,41 @@ h2:after {
 
 .move-right {
   left: 5%; }
+
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+.nav body {
+  font-family: "Lato", sans-serif; }
+
+.nav-button .fa-caret-left:before {
+  content: "\f0d9";
+  color: #B3B3B3;
+  position: relative;
+  left: 285px;
+  top: -50px; }
+
+.sidenav {
+  height: 30%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background: rgba(48, 68, 97, 0.87);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px; }
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 50px;
+  color: #818181;
+  display: block;
+  transition: 0.3s; }
+
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  margin-left: 50px;
+  color: #EFE9E9; }

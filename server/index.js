@@ -83,9 +83,11 @@ app.post('/login', passport.authenticate('local', {
     successRedirect: '/home'
 }));
 
-// app.post('/login', passport.authenticate('local', {
-// 	successRedirect: '/me'
-// }));
+app.get('/logout', function(req, res, next) {
+	req.logout();
+	return res.status(200)
+		.send('logged out');
+});
 
 
 /* ========================

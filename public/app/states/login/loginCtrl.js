@@ -19,7 +19,7 @@ angular.module('orderhound')
                 }
                 else {
 
-                    $state.go('home'); //takes us to home????
+                    $state.go('home'); 
                 }
             }).catch(function(err) {
                 alert('Unable to login');

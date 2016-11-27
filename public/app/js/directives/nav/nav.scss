@@ -1,12 +1,12 @@
 @import 'public/app/styles/scss/main';
 
-.menu {
+.nav {
   body {
     font-family: "Lato", sans-serif;
   }
 }
 
-.menu-button {
+.nav-button {
   .fa-caret-left:before {
       content: "\f0d9";
       color: $med-grey;
