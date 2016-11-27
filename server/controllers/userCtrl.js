@@ -23,7 +23,7 @@ module.exports = {
 
 		// Hash the users password for security
 		user.password = hashPassword(user.password);
-		db.admin_create([user.name, user.email, user.password, true], function(err, user) {
+		db.admin_create([user.name, user.email, user.password, user.photo, true], function(err, user) {
 		//db.user_create([user.name, user.email, user.password, true], function(err, user) {
 			// If err, send err
 
@@ -76,7 +76,7 @@ module.exports = {
 				.send(userProcessed);
 		});
 	},
-	
+
 	home: function(req, res, next) {
 	// If user isnt on the session, then return error status
 	if (!req.user) return res.status(401)
