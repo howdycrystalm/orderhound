@@ -1,27 +1,27 @@
 angular.module('orderhound')
     .controller('loginCtrl', function($scope, authService, $state) {
         $scope.test = "major tom to ground control";
-//**********************DELETE THIS BEFORE PRESENTING AND HOSTING*********************//
-  // $scope.user = {
-  //   name: 'Quinn',
-  //   password: 'q'
-  // }
-//***********************************************************************************//
+        //**********************DELETE THIS BEFORE PRESENTING AND HOSTING*********************//
+        // $scope.user = {
+        //   name: 'Quinn',
+        //   password: 'q'
+        // }
+        //***********************************************************************************//
         $scope.login = function(user) {
             authService.login(user).then(function(response) {
 
                 if (!response.data) {
-                    alert('User does not exist');
                     $scope.user.password = '';
-                }
-                else if(response.data.admin){
-                  $state.go('admin-home');
-                }
-                else {
+                    return alert('User does not exist'); //if something breaks, take out 'return'
 
-                    $state.go('home'); 
+                } else if (response.data.admin) {
+                    $state.go('admin-home');
+                } else {
+
+                    $state.go('home');
                 }
-            }).catch(function(err) {
+            }).catch(function(err) { //.catch gets the error that is returned
+                $scope.user.password = '';
                 alert('Unable to login');
             });
         };

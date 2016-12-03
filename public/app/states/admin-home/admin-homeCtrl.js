@@ -1,14 +1,13 @@
 angular.module('orderhound')
-.controller('admin-homeCtrl', function ($scope, homeService, user) {
+.controller('admin-homeCtrl', function ($scope, adminService, user) {
 
-  $scope.test = homeService.message;
   $scope.name = function(employee_name) {
     adminService.name(employee_name).then(function (response) {
     })
   }
 
   $scope.addpo = function (ponum) {
-    homeService.addpo(ponum).then(function (response) {
+    adminService.addpo(ponum).then(function (response) {
       //make a confirmation message, like checkin confirmed
 
     })
@@ -18,7 +17,7 @@ angular.module('orderhound')
     $scope.welcomeAssets = function() {
       //call the function that's in service
       console.log('is this operating?');
-      homeService.welcomeAssets() //now we're calling welcomeAssets in the homeService, from homeCtrl
+      adminService.welcomeAssets() //now we're calling welcomeAssets in the homeService, from homeCtrl
       .then(function(response) {
         console.log('this is our response', response)
         console.log(response.data[1].employee_name + " HELLLLLLLOOOO");

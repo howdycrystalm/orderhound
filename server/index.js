@@ -28,7 +28,7 @@ app.use(express.static(__dirname + './../public'));
    ======================== */
 const massiveUri = config.MASSIVE_URI;
 const massiveServer = massive.connectSync({
-   connectionString: massiveUri
+    connectionString: massiveUri
 });
 
 app.set('db', massiveServer); //these two lines let us pass database connection between files.
@@ -53,6 +53,7 @@ const passport = require('./services/passport');
 /* ========================
             POLICIES
    ======================== */
+//isAuthed makes sure the user can't hit certain endpoints if theyre not logged in
 const isAuthed = function(req, res, next) {
     if (!req.isAuthenticated()) return res.status(401)
         .send();
@@ -84,9 +85,9 @@ app.post('/login', passport.authenticate('local', {
 }));
 
 app.get('/logout', function(req, res, next) {
-	req.logout();
-	return res.status(200)
-		.send('logged out');
+    req.logout();
+    return res.status(200)
+        .send('logged out');
 });
 
 
@@ -100,6 +101,7 @@ app.get('/logout', function(req, res, next) {
 app.post('/checkin', checkinCtrl.checkin);
 app.get(''); //making the find button
 
+//controllers
 app.post('/register', userCtrl.register);
 app.get('/home', isAuthed, userCtrl.home);
 app.get('/admin-home', isAuthed, userCtrl.home);
@@ -115,5 +117,5 @@ app.post('/find', isAuthed, findCtrl.find_po);
 
 const port = config.PORT;
 app.listen(port, function() {
-  console.log("listening on", port);
+    console.log("listening on", port);
 });

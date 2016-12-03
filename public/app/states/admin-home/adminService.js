@@ -15,4 +15,13 @@ angular.module('orderhound')
     })
  };
 
+ this.welcomeAssets = function() {
+   return $http({
+     method: 'GET',
+     url: '/welcomeAssets'
+   }).then(function(response){ //catching the response from the server
+     return response; //response.data is the info we want
+ });
+};
+
 });
